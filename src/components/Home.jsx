@@ -10,7 +10,7 @@ import {
   buildCustomQuiz,
 } from '../quiz.js'
 
-export default function Home({ onStart }) {
+export default function Home({ onStart, onOpenGlossary }) {
   return (
     <div className="home">
       <section className="hero">
@@ -20,6 +20,9 @@ export default function Home({ onStart }) {
           sværhedsgrad. Spørgsmålene blandes i tilfældig rækkefølge hver gang du
           starter.
         </p>
+        <button className="ghost-btn hero-glossary-btn" onClick={onOpenGlossary}>
+          📖 Slå begreber op i ordbogen
+        </button>
       </section>
 
       {QUIZ_GROUPS.map((group) => {

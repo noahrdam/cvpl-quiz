@@ -1,0 +1,615 @@
+{
+  "categories": [
+    "Hardware",
+    "Operativsystemer",
+    "Virtualisering",
+    "Netværk",
+    "Protokoller & adressering",
+    "Kryptografi & hashing",
+    "Sikkerhed",
+    "Malware & angreb",
+    "Servere"
+  ],
+  "terms": [
+    {
+      "term": "CPU",
+      "full": "Central Processing Unit",
+      "category": "Hardware",
+      "definition": "Processoren - computerens 'hjerne'. Den behandler information og udfører kommandoer; stort set alt, der sker i en computer, går på et tidspunkt gennem CPU'en."
+    },
+    {
+      "term": "RAM",
+      "full": "Random Access Memory",
+      "category": "Hardware",
+      "definition": "Flygtig korttidshukommelse (primær/hovedhukommelse). Den kan tilgås meget hurtigt, men mister alt indhold, når strømmen forsvinder, og kan derfor ikke gemme data permanent."
+    },
+    {
+      "term": "HDD",
+      "full": "Hard Disk Drive",
+      "category": "Hardware",
+      "definition": "Harddisk. Lagrer typisk data på en magnetisk, roterende plade. God til store mængder data og bevarer data uden strøm, men er langsommere end en SSD."
+    },
+    {
+      "term": "SSD",
+      "full": "Solid-State Drive",
+      "category": "Hardware",
+      "definition": "Flash-baseret lagerdisk uden bevægelige dele (bygget som et SD-kort). Hurtigere at læse/skrive end en HDD og fylder typisk mindre."
+    },
+    {
+      "term": "Grafikkort (GPU)",
+      "full": "Graphics Processing Unit",
+      "category": "Hardware",
+      "definition": "Næsten en selvstændig computer, der beslutter hvilke pixels på skærmen der skal lyse og i hvilken farve. Især vigtigt til komplekse 3D-beregninger."
+    },
+    {
+      "term": "Integreret grafik",
+      "category": "Hardware",
+      "definition": "Grafik indbygget direkte i CPU'en. Praktisk, men typisk svagere end et separat (dedikeret) grafikkort."
+    },
+    {
+      "term": "Bundkort (Motherboard)",
+      "category": "Hardware",
+      "definition": "Det store, flade kredsløbskort, hvor alle andre komponenter forbindes, så de kan kommunikere med hinanden."
+    },
+    {
+      "term": "Strømforsyning (PSU)",
+      "full": "Power Supply Unit",
+      "category": "Hardware",
+      "definition": "Tager elektricitet fra stikkontakten og omdanner/fordeler den til de komponenter i computeren, der har brug for strøm."
+    },
+    {
+      "term": "Heat sink (Køleplade)",
+      "category": "Hardware",
+      "definition": "Et stykke metal, der lægges på f.eks. CPU'en for at lede varme væk fra den varme komponent."
+    },
+    {
+      "term": "Expansion slot (Udvidelsesport)",
+      "category": "Hardware",
+      "definition": "Port på bundkortet, hvor man kan tilføje udvidelseskort - f.eks. et grafikkort eller et trådløst kort - for at opgradere computeren."
+    },
+    {
+      "term": "Case (Kabinet)",
+      "category": "Hardware",
+      "definition": "Plastik-/metalkassen, hvor alle computerens dele samles. Findes typisk som mini tower, midtower og full tower."
+    },
+    {
+      "term": "ESD",
+      "full": "Electrostatic Discharge",
+      "category": "Hardware",
+      "definition": "Statisk elektricitet (elektrostatisk udladning), der kan skade skrøbelige computerdele. Man skal tage højde for ESD, når man håndterer hardware."
+    },
+    {
+      "term": "Trådløst kort (Wireless card)",
+      "category": "Hardware",
+      "definition": "Udvidelseskort, der giver computeren adgang til internettet via wifi, uden man behøver Ethernet-kabler."
+    },
+    {
+      "term": "Køling",
+      "category": "Hardware",
+      "definition": "System, der fjerner varme fra især CPU og grafikkort. En computer kan have enten luftkøling eller væskekøling, hver med fordele og ulemper."
+    },
+    {
+      "term": "Operativsystem (OS)",
+      "category": "Operativsystemer",
+      "definition": "System-software, der fungerer som bindeled (interface) mellem brugeren og hardwaren og styrer eksekveringen af alle programmer. Eksempler: Windows, Linux, macOS, Android."
+    },
+    {
+      "term": "GUI",
+      "full": "Graphical User Interface",
+      "category": "Operativsystemer",
+      "definition": "Grafisk brugerflade, hvor man peger og klikker frem for at skrive kommandoer. Lettere at arbejde med end en kommandolinje, hvilket de fleste brugere foretrækker."
+    },
+    {
+      "term": "Driver",
+      "category": "Operativsystemer",
+      "definition": "Software, der lader operativsystemet kommunikere med og styre en bestemt hardwareenhed (f.eks. printer, grafikkort eller netværkskort)."
+    },
+    {
+      "term": "Process management",
+      "category": "Operativsystemer",
+      "definition": "OS-funktion, der styrer hvilken proces processoren kører, i hvilken rækkefølge og hvor længe, samt allokerer og fjerner processer fra processoren."
+    },
+    {
+      "term": "Memory management",
+      "category": "Operativsystemer",
+      "definition": "OS-funktion, der styrer den primære hukommelse (RAM): hvor meget hukommelse en proces får, og hvornår den frigives igen."
+    },
+    {
+      "term": "File management",
+      "category": "Operativsystemer",
+      "definition": "OS-funktion (filstyring), der holder styr på filer, mapper og hvordan data organiseres og tilgås på lageret."
+    },
+    {
+      "term": "Security management",
+      "category": "Operativsystemer",
+      "definition": "OS-funktion, der styrer hvilke brugere der må tilgå hvilke enheder eller informationer, og som begrænser uautoriseret adgang og aktivitet."
+    },
+    {
+      "term": "x86",
+      "category": "Operativsystemer",
+      "definition": "Navnet på en processor-arkitektur (fra Intels gamle modeller, der sluttede på '86'). Mappen 'Programmer (x86)' i Windows er reserveret til 32-bit-programmer - x86 siger altså ikke i sig selv 32- eller 64-bit."
+    },
+    {
+      "term": "Virtualisering",
+      "category": "Virtualisering",
+      "definition": "Teknik, hvor én fysisk server kan hoste mange virtuelle servere og operativsystemer. Meget brugt i datacentre, fordi det reducerer mængden af fysisk hardware."
+    },
+    {
+      "term": "Hyper-V",
+      "category": "Virtualisering",
+      "definition": "Microsofts virtualiseringsplatform, der bruges til at hoste virtuelle maskiner på en fysisk server."
+    },
+    {
+      "term": "Host",
+      "category": "Virtualisering",
+      "definition": "Den fysiske server, der kører (hoster) en eller flere virtuelle maskiner."
+    },
+    {
+      "term": "Guest",
+      "category": "Virtualisering",
+      "definition": "En virtuel maskine, der kører oven på en host (den fysiske server)."
+    },
+    {
+      "term": "Switch",
+      "category": "Netværk",
+      "definition": "Netværksenhed, der videresender data mod dets destination på det lokale netværk. Arbejder primært på layer 2 ud fra MAC-adresser. Et 'intermediary device'."
+    },
+    {
+      "term": "Router",
+      "category": "Netværk",
+      "definition": "Netværksenhed, der videresender data mellem forskellige netværk - f.eks. fra dit lokale netværk ud mod internettet. Arbejder på layer 3 ud fra IP-adresser."
+    },
+    {
+      "term": "Firewall",
+      "category": "Netværk",
+      "definition": "Netværksenhed i datatrafikkens vej, der af sikkerhedshensyn kontrollerer trafikken og tillader eller blokerer den."
+    },
+    {
+      "term": "Access Point (AP)",
+      "category": "Netværk",
+      "definition": "Enhed, som trådløse enheder forbinder sig til via radiofrekvenser (wifi), og som har fysisk forbindelse til resten af netværket."
+    },
+    {
+      "term": "NIC",
+      "full": "Network Interface Card",
+      "category": "Netværk",
+      "definition": "Netværkskort/netværksadapter. Alle netværksenheder har en NIC for at kunne forbinde til netværket. Det er på NIC'et, MAC-adressen er 'burned-in'."
+    },
+    {
+      "term": "Intermediary device",
+      "category": "Netværk",
+      "definition": "Mellemled, der hjælper information rundt i netværket - f.eks. en router eller en switch. Modsætningen er slut-enheder (end devices) som en printer eller tablet."
+    },
+    {
+      "term": "Topologi",
+      "category": "Netværk",
+      "definition": "Et diagram eller en tegning af, hvordan et netværk er forbundet."
+    },
+    {
+      "term": "Klient/Server-modellen",
+      "category": "Netværk",
+      "definition": "Netværksmodel med central styring fra en server, hvor det meste information ligger. Klienter beder om de nødvendige informationer fra serveren. God til mange enheder og centraliseret styring."
+    },
+    {
+      "term": "Peer to Peer",
+      "category": "Netværk",
+      "definition": "Netværksmodel, hvor enheder kommunikerer direkte og ligeværdigt med hinanden uden en central server."
+    },
+    {
+      "term": "OSI-modellen",
+      "category": "Netværk",
+      "definition": "En lagdelt referencemodel for netværkskommunikation, der beskriver, hvordan data bevæger sig gennem forskellige lag (layers)."
+    },
+    {
+      "term": "IP",
+      "full": "Internet Protocol",
+      "category": "Protokoller & adressering",
+      "definition": "Protokollen for logisk adressering på layer 3, der sørger for, at data kan finde vej mellem netværk."
+    },
+    {
+      "term": "IPv4-adresse",
+      "category": "Protokoller & adressering",
+      "definition": "Adresse på 32 bit, skrevet som fire tal (octetter) adskilt af tre punktummer, hvor hvert tal er mellem 0 og 255. Opdelt i en network-del og en host-del."
+    },
+    {
+      "term": "Subnetmaske",
+      "category": "Protokoller & adressering",
+      "definition": "Maske (f.eks. 255.255.0.0), hvis eneste job er at markere, hvor grænsen mellem network-delen og host-delen i en IP-adresse går. Hvor masken er 255, dér er det network."
+    },
+    {
+      "term": "Prefix (/24)",
+      "category": "Protokoller & adressering",
+      "definition": "Kort skrivemåde for subnetmasken, der angiver hvor mange bit netværket bruger. /24 betyder 24 network-bit og efterlader 8 bit til hosts = 256 adresser, hvoraf 254 er brugbare."
+    },
+    {
+      "term": "Network-del",
+      "category": "Protokoller & adressering",
+      "definition": "Den del af IP-adressen (som et 'gadenavn'), der skal være ens for alle enheder på samme netværk, så de kan kommunikere."
+    },
+    {
+      "term": "Host-del",
+      "category": "Protokoller & adressering",
+      "definition": "Den del af IP-adressen (som et 'husnummer'), der er unik for hver enkelt enhed, så der ikke opstår duplikerede adresser."
+    },
+    {
+      "term": "Network ID",
+      "category": "Protokoller & adressering",
+      "definition": "Den første adresse i et netværk, der identificerer selve netværket. Kan ikke bruges som host-adresse."
+    },
+    {
+      "term": "Broadcast address",
+      "category": "Protokoller & adressering",
+      "definition": "Den sidste adresse i et netværk, der bruges til at sende til alle på netværket på én gang. Kan ikke bruges som host-adresse."
+    },
+    {
+      "term": "Octet",
+      "category": "Protokoller & adressering",
+      "definition": "Ét af de fire tal i en IPv4-adresse. Hver octet repræsenterer 8 bit og kan derfor have en værdi mellem 0 og 255."
+    },
+    {
+      "term": "ARP",
+      "full": "Address Resolution Protocol",
+      "category": "Protokoller & adressering",
+      "definition": "Regelsæt, der finder en enheds layer 2-adresse (MAC) ud fra dens IP-adresse på det lokale netværk. Kender computeren ikke MAC'en, sendes en broadcast, som den rette enhed svarer på."
+    },
+    {
+      "term": "MAC-adresse",
+      "full": "Media Access Control",
+      "category": "Protokoller & adressering",
+      "definition": "En fysisk, 'burned-in' layer 2-adresse på netværkskortet (NIC). Switches forwarder data ud fra MAC-adresser."
+    },
+    {
+      "term": "DNS",
+      "full": "Domain Name System",
+      "category": "Protokoller & adressering",
+      "definition": "System, der oversætter et menneskeligt domænenavn (f.eks. dr.dk) til den tilhørende IP-adresse."
+    },
+    {
+      "term": "DHCP",
+      "full": "Dynamic Host Configuration Protocol",
+      "category": "Protokoller & adressering",
+      "definition": "Protokol, der automatisk tildeler ledige IP-adresser til nye enheder på et netværk."
+    },
+    {
+      "term": "TCP",
+      "full": "Transmission Control Protocol",
+      "category": "Protokoller & adressering",
+      "definition": "Transportlagets (layer 4) protokol, der hjælper bl.a. HTTP med portinformation og sørger for pålidelig levering af data."
+    },
+    {
+      "term": "UDP",
+      "full": "User Datagram Protocol",
+      "category": "Protokoller & adressering",
+      "definition": "Transportprotokol på layer 4, der sender data hurtigt og uden de samme pålidelighedsgarantier som TCP."
+    },
+    {
+      "term": "HTTP",
+      "full": "HyperText Transfer Protocol",
+      "category": "Protokoller & adressering",
+      "definition": "Applikationslagets protokol til at hente websider. Bruger typisk det velkendte portnummer 80 og hjælpes af TCP på transportlaget."
+    },
+    {
+      "term": "Port / portnummer",
+      "category": "Protokoller & adressering",
+      "definition": "Nummer på transportlaget (layer 4), der identificerer en bestemt tjeneste/applikation. F.eks. bruger HTTP port 80."
+    },
+    {
+      "term": "Layer 2 / 3 / 4",
+      "category": "Protokoller & adressering",
+      "definition": "Lag i protokolstakken. Layer 2 = MAC-adresser (switch), layer 3 = IP-adresser (router), layer 4 = portnumre (TCP/UDP)."
+    },
+    {
+      "term": "Kryptering (Encryption)",
+      "category": "Kryptografi & hashing",
+      "definition": "Forvrænger (scrambler) data, så uautoriserede ikke kan læse den. Kan dekrypteres igen med den rette nøgle - en vigtig måde at holde data fortrolig på."
+    },
+    {
+      "term": "Hashing",
+      "category": "Kryptografi & hashing",
+      "definition": "En envejsfunktion: data omdannes til en hash, der ikke kan vendes tilbage til originalen. Bruges til at gemme kodeord sikkert og til at verificere integritet."
+    },
+    {
+      "term": "Salt",
+      "category": "Kryptografi & hashing",
+      "definition": "En unik værdi, der tilføjes til hvert kodeord før hashing, så identiske kodeord får forskellige hashes. Beskytter mod forudberegnede opslagstabeller (rainbow tables)."
+    },
+    {
+      "term": "TLS",
+      "full": "Transport Layer Security",
+      "category": "Kryptografi & hashing",
+      "definition": "Efterfølger til SSL. Giver kryptering og fortrolighed ved forbindelse til websites og hjælper med at verificere, at man taler med det rigtige site og ikke et hacker-site."
+    },
+    {
+      "term": "SSL",
+      "full": "Secure Sockets Layer",
+      "category": "Kryptografi & hashing",
+      "definition": "Den ældre forgænger til TLS, der ligeledes gav krypteret forbindelse mellem computer og website."
+    },
+    {
+      "term": "IPSec",
+      "full": "Internet Protocol Security",
+      "category": "Kryptografi & hashing",
+      "definition": "Betyder i bund og grund 'securing IP' - en populær metode til at sikre IP-trafik og beskytte data in motion (data der bevæger sig)."
+    },
+    {
+      "term": "2FA",
+      "full": "Two-Factor Authentication",
+      "category": "Kryptografi & hashing",
+      "definition": "Login, der kræver to forskellige faktorer - f.eks. noget man ved (pinkode/password) og noget man har (smartcard eller certifikat). Begge faktorer kræves."
+    },
+    {
+      "term": "Data at rest",
+      "category": "Kryptografi & hashing",
+      "definition": "Information, der ligger lagret et sted, f.eks. på en disk eller et flashdrev."
+    },
+    {
+      "term": "Data in transit",
+      "category": "Kryptografi & hashing",
+      "definition": "Information, der bevæger sig gennem netværket (også kaldet data in motion)."
+    },
+    {
+      "term": "Rainbow table",
+      "category": "Kryptografi & hashing",
+      "definition": "En forudberegnet opslagstabel over hashes, som angribere kan bruge til hurtigt at slå usaltede kodeord-hashes op. Salt modvirker netop dette."
+    },
+    {
+      "term": "Cybersikkerhed",
+      "category": "Sikkerhed",
+      "definition": "At beskytte systemer, netværk og applikationer mod enhver form for digitalt angreb eller kompromittering - tænkt som faserne før, under og efter et angreb."
+    },
+    {
+      "term": "Authentication",
+      "category": "Sikkerhed",
+      "definition": "At identificere hvem en person eller entitet er - f.eks. via password eller 2FA."
+    },
+    {
+      "term": "Authorization",
+      "category": "Sikkerhed",
+      "definition": "At kontrollere hvad en allerede identificeret bruger må gøre, baseret på vedkommendes rettigheder og tilladelser."
+    },
+    {
+      "term": "Threat Actor",
+      "category": "Sikkerhed",
+      "definition": "En person, gruppe eller entitet, der står bag en cybertrussel eller et angreb."
+    },
+    {
+      "term": "White Hat",
+      "category": "Sikkerhed",
+      "definition": "En etisk hacker, der typisk med tilladelse tester systemers sikkerhed for at finde og hjælpe med at lukke sårbarheder. Bruger ofte værktøjer som Kali Linux."
+    },
+    {
+      "term": "Black Hat",
+      "category": "Sikkerhed",
+      "definition": "En ondsindet hacker, der ulovligt bryder ind i systemer - typisk for egen vinding, for at stjæle data eller forårsage skade."
+    },
+    {
+      "term": "Kali Linux",
+      "category": "Sikkerhed",
+      "definition": "En Linux-distribution beregnet til it-sikkerhed og etisk hacking, hvor man kan teste styrken af sine egne systemer."
+    },
+    {
+      "term": "Social engineering",
+      "category": "Sikkerhed",
+      "definition": "Psykologisk manipulation af mennesker til at udføre handlinger eller afsløre fortrolig information. Ikke teknisk malware, men en udbredt vej ind - phishing er et eksempel."
+    },
+    {
+      "term": "Man in the Middle (MitM)",
+      "category": "Sikkerhed",
+      "definition": "Angreb, hvor angriberen i hemmelighed placerer sig mellem to kommunikerende parter for at aflytte, opfange eller manipulere kommunikationen."
+    },
+    {
+      "term": "IP Spoofing",
+      "category": "Sikkerhed",
+      "definition": "At forfalske kilde-IP-adressen i netværkspakker, så de ser ud til at komme fra en anden, ofte betroet, kilde. Bruges til at skjule identitet eller omgå adgangskontrol."
+    },
+    {
+      "term": "Masquerade",
+      "category": "Sikkerhed",
+      "definition": "Når et synligt angreb bruges som afledning (misdirection), mens angriberen i virkeligheden går efter mere kritisk data et andet sted."
+    },
+    {
+      "term": "Attack vector",
+      "category": "Sikkerhed",
+      "definition": "En mulig vej eller metode, hvormed en angriber kan komme ind i et system. Antallet voksede, da man begyndte at netværke og fordele systemer."
+    },
+    {
+      "term": "Exfiltrering",
+      "category": "Sikkerhed",
+      "definition": "Når data stjæles og føres ud af en virksomhed. Tab af al data, PII og firmahemmeligheder kan i værste fald betyde enden på virksomheden."
+    },
+    {
+      "term": "PII",
+      "full": "Personally Identifiable Information",
+      "category": "Sikkerhed",
+      "definition": "Personhenførbar information - data, der kan bruges til at identificere en bestemt person."
+    },
+    {
+      "term": "Backdoor (Bagdør)",
+      "category": "Sikkerhed",
+      "definition": "Enhver metode til at omgå normale sikkerhedsforanstaltninger. Kan bruges til at stjæle data, installere mere malware og overtage enheder."
+    },
+    {
+      "term": "Malware",
+      "category": "Malware & angreb",
+      "definition": "Fællesbetegnelse for software, der med vilje er designet til at skade, lække information, skaffe uautoriseret adgang eller på anden vis kompromittere brugerens sikkerhed."
+    },
+    {
+      "term": "Virus",
+      "category": "Malware & angreb",
+      "definition": "Malware, der replikerer sig ved at indsætte sin egen kode i andre programmer. Kræver et host-program; når host'en køres, eksekveres viruskoden."
+    },
+    {
+      "term": "Orm (Worm)",
+      "category": "Malware & angreb",
+      "definition": "Selvstændigt (standalone) malware-program, der spreder sig selv - oftest over netværk ved at udnytte sikkerhedshuller - uden at kræve et host-program."
+    },
+    {
+      "term": "Trojansk hest (Trojan)",
+      "category": "Malware & angreb",
+      "definition": "Malware, der narrer brugeren ved at udgive sig for et harmløst program. Spredes typisk via social engineering og forsøger normalt ikke selv at replikere sig."
+    },
+    {
+      "term": "Ransomware",
+      "category": "Malware & angreb",
+      "definition": "Malware, der blokerer adgang til ofrets data/computer (ofte ved kryptering) og kræver løsepenge for at låse op."
+    },
+    {
+      "term": "Cryptoviral extortion",
+      "category": "Malware & angreb",
+      "definition": "Teknik brugt af avanceret ransomware, hvor ofrets filer krypteres og gøres utilgængelige, og der kræves en løsesum for at dekryptere dem."
+    },
+    {
+      "term": "Spyware",
+      "category": "Malware & angreb",
+      "definition": "Malware, der i hemmelighed indsamler information om dig - f.eks. besøgte sites, brugernavne, kodeord og betalingsinfo - og sender den til en cyberkriminel."
+    },
+    {
+      "term": "Keylogger",
+      "category": "Malware & angreb",
+      "definition": "En type spyware, der i hemmelighed registrerer hvert tastetryk og sender det til en cyberkriminel. Især kodeord og fortrolig information kan stjæles på den måde."
+    },
+    {
+      "term": "RAT",
+      "full": "Remote Access Trojan",
+      "category": "Malware & angreb",
+      "definition": "Malware, der fjernstyrer en computer over internettet. Angriberen kan bevæge mus, skrive og se gennem webcam, men forbliver oftest stille og virker som keylogger."
+    },
+    {
+      "term": "DDoS",
+      "full": "Distributed Denial of Service",
+      "category": "Malware & angreb",
+      "definition": "Angreb, der gør en computer eller forbindelse utilgængelig ved at oversvømme målet med overflødig trafik fra mange kilder - ofte inficerede computere i et botnet."
+    },
+    {
+      "term": "Botnet",
+      "category": "Malware & angreb",
+      "definition": "Et netværk af inficerede computere (bots), der styres af angriberen og f.eks. bruges til at oversvømme et mål med trafik i et DDoS-angreb."
+    },
+    {
+      "term": "Rootkit",
+      "category": "Malware & angreb",
+      "definition": "Værktøjssæt, der giver en trussel-aktør skjult fjernadgang og kontrol over en computer. Åbner ofte en bagdør og undgår detektion; svær at fjerne, især i kernen (kernel)."
+    },
+    {
+      "term": "Fileless malware",
+      "category": "Malware & angreb",
+      "definition": "Malware, der udelukkende lever i hukommelsen (RAM) og ikke skriver til harddisken. Det gør den svær at opdage, og den slettes ofte ved genstart."
+    },
+    {
+      "term": "Adware",
+      "category": "Malware & angreb",
+      "definition": "Malware, der installerer sig uden brugerens viden og viser reklamer (ofte pop-ups). Nogle indsamler også data og fungerer dermed som spyware."
+    },
+    {
+      "term": "Brute force",
+      "category": "Malware & angreb",
+      "definition": "Angreb, der systematisk (ofte automatiseret) afprøver mange kodeord, indtil det rette findes. Mest effektivt mod korte/simple kodeord - derfor låser mange sites kontoen efter flere fejlforsøg."
+    },
+    {
+      "term": "Cryptojacking",
+      "category": "Malware & angreb",
+      "definition": "I hemmelighed at udnytte en computer til at mine kryptovaluta. Målet er at forblive stille og tjene på det; kan markant sænke hastigheden og slide på hardwaren."
+    },
+    {
+      "term": "Browser hijacking",
+      "category": "Malware & angreb",
+      "definition": "Uønsket software, der ændrer en browsers indstillinger uden tilladelse - f.eks. hjemmeside, søgemaskine eller indsætter reklamer. Installeres ofte ved et uheld med andet software."
+    },
+    {
+      "term": "Malvertising",
+      "category": "Malware & angreb",
+      "definition": "Brug af reklamer på troværdige websites til at sprede malware. Kræver ikke nødvendigvis, at brugeren klikker, og udnytter ikke sårbarheder på selve websitet."
+    },
+    {
+      "term": "Wiper",
+      "category": "Malware & angreb",
+      "definition": "Malware, der bevidst sletter en computers hukommelse og data mod brugerens vilje og dermed ødelægger al nyttig information."
+    },
+    {
+      "term": "RAM scraper",
+      "category": "Malware & angreb",
+      "definition": "Malware, der installerer sig på point-of-sale-systemer (kassesystemer) for at indsamle personlig info som kreditkortnumre og pinkoder."
+    },
+    {
+      "term": "Rogue security software",
+      "category": "Malware & angreb",
+      "definition": "Internetsvindel, der narrer brugeren til at tro, der er en virus, og betale for et falskt fjernelsesværktøj, som i virkeligheden installerer malware. Spredes typisk via malvertising."
+    },
+    {
+      "term": "Hybrid malware",
+      "category": "Malware & angreb",
+      "definition": "Brug af to eller flere typer malware i ét samlet angreb - f.eks. en kombination af trojanere og orme eller af adware og virus."
+    },
+    {
+      "term": "Phishing",
+      "category": "Malware & angreb",
+      "definition": "Svindel, hvor angribere narrer folk til at afsløre følsom information eller installere malware - ofte via mails, der udgiver sig for en troværdig kilde (f.eks. din bank)."
+    },
+    {
+      "term": "Server",
+      "category": "Servere",
+      "definition": "Maskine, der leverer netværkstjenester til brugere, applikationer og andre servere. Har ingen reel funktion, før der placeres software eller en rolle på den."
+    },
+    {
+      "term": "File server (Fil-server)",
+      "category": "Servere",
+      "definition": "Den mest populære servertype. Lagrer ustruktureret data (filer) centralt for alle - brugere gemmer filer, udviklere gemmer applikationer, og man gemmer værktøjer og backups."
+    },
+    {
+      "term": "Database server",
+      "category": "Servere",
+      "definition": "Server, der primært bruges af websites og applikationer til at læse og skrive struktureret data i en database."
+    },
+    {
+      "term": "Web server",
+      "category": "Servere",
+      "definition": "Server, der hoster og eksponerer websites - eksternt mod internettet og internt mod brugere på intranettet."
+    },
+    {
+      "term": "Applikationsserver",
+      "category": "Servere",
+      "definition": "Server, der hoster middle-tier-komponenterne (serverside-koden) mellem front-end (website/app) og back-end (databasen)."
+    },
+    {
+      "term": "Print server",
+      "category": "Servere",
+      "definition": "Server, der eksponerer printere til netværket og giver mulighed for centralt at administrere printere, drivere og print-jobs."
+    },
+    {
+      "term": "Mail server",
+      "category": "Servere",
+      "definition": "Server, der lagrer, behandler og leverer e-mails."
+    },
+    {
+      "term": "Domain Controller (DC)",
+      "category": "Servere",
+      "definition": "Server, der binder netværket sammen og står for central styring - herunder håndtering af brugere og login i et domæne."
+    },
+    {
+      "term": "IIS",
+      "full": "Internet Information Services",
+      "category": "Servere",
+      "definition": "Microsofts web-server-platform, der bruges til at hoste websites."
+    },
+    {
+      "term": "Server Manager",
+      "category": "Servere",
+      "definition": "Værktøj i Windows Server til at fjernadministrere flere maskiner på én gang - man kan se computernavn, IP-adresse, processorer, hukommelse, logs og events."
+    },
+    {
+      "term": "Rack / Tower / Blade",
+      "category": "Servere",
+      "definition": "Tre typiske fysiske server-kabinetter (enclosures) til at huse servere med fokus på effektiv strøm, køling og pladsudnyttelse."
+    },
+    {
+      "term": "Struktureret vs. ustruktureret data",
+      "category": "Servere",
+      "definition": "Ustruktureret data er løse filer (gemmes på en file server). Struktureret data er organiseret i en database (gemmes på en database server)."
+    },
+    {
+      "term": "hostname",
+      "category": "Servere",
+      "definition": "Kommando (bl.a. på Cisco-udstyr), man bruger til at angive et navn til en enhed på netværket, f.eks. 'hostname S1'."
+    }
+  ]
+}

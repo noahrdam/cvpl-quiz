@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Home from './components/Home.jsx'
 import Quiz from './components/Quiz.jsx'
 import Results from './components/Results.jsx'
+import Glossary from './components/Glossary.jsx'
 import { getQuizQuestions } from './quiz.js'
 
 export default function App() {
@@ -42,15 +43,22 @@ export default function App() {
         <button className="brand" onClick={goHome}>
           🛡️ <span>Cyberværnepligt&nbsp;Quiz</span>
         </button>
-        {view !== 'home' && (
+        {view === 'home' ? (
+          <button className="ghost-btn" onClick={() => setView('glossary')}>
+            📖 Ordbog
+          </button>
+        ) : (
           <button className="ghost-btn" onClick={goHome}>
-            Afslut
+            {view === 'glossary' ? '← Tilbage' : 'Afslut'}
           </button>
         )}
       </header>
 
       <main className="app-main">
-        {view === 'home' && <Home onStart={startQuiz} />}
+        {view === 'home' && (
+          <Home onStart={startQuiz} onOpenGlossary={() => setView('glossary')} />
+        )}
+        {view === 'glossary' && <Glossary />}
         {view === 'quiz' && (
           <Quiz
             quiz={activeQuiz}

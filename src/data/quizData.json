@@ -3,7 +3,7 @@
     "title": "Cyberværnepligt Optagelsesprøve - Quiz",
     "description": "Quiz til forberedelse til optagelsesprøven på cyberværnepligten. Spørgsmål dækker computeropbygning, operativsystemer, netværk, kryptografi, IT-sikkerhed og malware.",
     "language": "da",
-    "version": "1.0",
+    "version": "1.1",
     "totalQuestions": 120
   },
   "categories": [
@@ -35,10 +35,10 @@
       "type": "single_select",
       "question": "Jeg bruger et 32-bit-baseret program på min Windows 64-bit-baserede workstation. Hvor er det program som standard gemt?",
       "options": [
-        "Du kan slet ikke bruge et 32-bits baseret program på en Windows-64 baseret workstation",
-        "I \"programmer\"-mappen på C:Drevet",
-        "I \"Windows\\Temp\"-mappen på C:Drevet",
-        "I \"programmer(x86)\"-mappen på C:Drevet"
+        "Et 32-bit-program kan ikke afvikles på 64-bit Windows uden en emulator installeres først",
+        "I \"Programmer\"-mappen, hvor 64-bit Windows samler alle installerede programmer",
+        "I \"Windows\\System32\"-mappen sammen med systemets øvrige eksekverbare filer",
+        "I \"Programmer (x86)\"-mappen, som er reserveret til 32-bit-programmer"
       ],
       "correctAnswers": [3],
       "explanation": "'x86' henviser ikke til, om det er 32- eller 64-bits baseret. Det er derimod navnet på arkitekturen, det er bygget på, da Intel før i tiden lavede processorer, der alle sluttede på '86' i navnet."
@@ -70,10 +70,10 @@
       "type": "multi_select",
       "question": "Hvilken af følgende er fordele ved at bruge en SSD fremfor at bruge en HDD?",
       "options": [
-        "En SSD er bedre til større mængder data, da de fås i større udgaver",
-        "En SSD er hurtigere at læse/skrive til",
-        "En SSD er billigere pr. GB",
-        "En SSD fylder typisk mindre"
+        "En SSD kan lagre flere terabyte pr. enhed end nogen HDD",
+        "En SSD læser og skriver data markant hurtigere",
+        "En SSD koster mindre pr. gigabyte lagerplads",
+        "En SSD fylder og vejer typisk mindre"
       ],
       "correctAnswers": [1, 3],
       "explanation": "SSD står for Solid-state Drive og er en harddisk lavet på nogenlunde samme måde som et SD-kort, og er altså uden en fysisk, snurrende disk. Den er væsentligt mindre - og har højere overførselshastigheder."
@@ -125,10 +125,10 @@
       "type": "single_select",
       "question": "Hvad sker der med data gemt i RAM, når du slukker computeren?",
       "options": [
-        "Det gemmes permanent",
-        "Det bliver slettet",
-        "Det flyttes automatisk til harddisken",
-        "Det krypteres"
+        "Det gemmes permanent på en dedikeret hukommelseschip",
+        "Det går tabt, fordi RAM kun holder på data mens der er strøm",
+        "Det flyttes automatisk over på harddisken som backup",
+        "Det krypteres og låses indtil næste opstart"
       ],
       "correctAnswers": [1],
       "explanation": "RAM er korttidshukommelse (flygtig hukommelse). Data på RAM bliver slettet, hver gang du slukker computeren, og man kan derfor ikke gemme filer permanent der."
@@ -139,7 +139,7 @@
       "difficulty": "let",
       "type": "single_select",
       "question": "Hvilken komponent er det store kredsløbskort, hvor alle andre komponenter forbindes?",
-      "options": ["CPU'en", "Bundkortet (motherboard)", "Strømforsyningen", "Grafikkortet"],
+      "options": ["CPU'en (processoren)", "Bundkortet (motherboard)", "Strømforsyningen (PSU)", "Grafikkortet (GPU)"],
       "correctAnswers": [1],
       "explanation": "Bundkortet er det store, flade kredsløbskort og er hovedkomponenten, hvor alle andre dele forbindes. Dets formål er at få computerens dele til at kommunikere med hinanden."
     },
@@ -150,10 +150,10 @@
       "type": "single_select",
       "question": "Hvorfor er RAM nyttig i forhold til harddisken under brug?",
       "options": [
-        "RAM kan lagre meget mere data",
-        "RAM er billigere",
-        "RAM kan tilgå data meget hurtigere",
-        "RAM gemmer data permanent"
+        "RAM kan lagre langt mere data end harddisken",
+        "RAM er billigere pr. gigabyte end harddisken",
+        "RAM kan tilgå data langt hurtigere end harddisken",
+        "RAM beholder data permanent selv uden strøm"
       ],
       "correctAnswers": [2],
       "explanation": "RAM lagrer data ligesom harddisken, men med meget mindre plads. Fordelen er, hvor hurtigt den kan tilgå information, hvilket gør den nyttig til hurtigt at give CPU'en data, som ville tage for lang tid at hente fra harddisken."
@@ -165,10 +165,10 @@
       "type": "single_select",
       "question": "Hvad er hovedformålet med et grafikkort?",
       "options": [
-        "At forsyne computeren med strøm",
-        "At beslutte hvilke pixels der skal lyse og i hvilken farve på skærmen",
-        "At lagre data permanent",
-        "At køle CPU'en"
+        "At omdanne strøm fra stikkontakten og fordele den til komponenterne",
+        "At beregne hvilke pixels der skal lyse og i hvilken farve på skærmen",
+        "At lagre spil og programmer permanent på disken",
+        "At lede varme væk fra processoren under belastning"
       ],
       "correctAnswers": [1],
       "explanation": "Grafikkortet er nærmest en hel selvstændig computer dedikeret til at vise de rigtige ting på skærmen - det beslutter hvilke pixels der skal lyse og i hvilken farve. Det er især vigtigt til komplekse 3D-beregninger."
@@ -180,10 +180,10 @@
       "type": "single_select",
       "question": "Hvad gør en strømforsyning (power supply) i en computer?",
       "options": [
-        "Den lagrer data",
-        "Den tager elektricitet fra stikkontakten og fordeler den til komponenterne",
-        "Den behandler grafik",
-        "Den styrer netværksforbindelser"
+        "Den fungerer som midlertidig lagerplads for åbne programmer",
+        "Den omdanner strøm fra stikkontakten og fordeler den til komponenterne",
+        "Den udfører computerens grafiske beregninger til skærmen",
+        "Den styrer kommunikationen mellem enheder på netværket"
       ],
       "correctAnswers": [1],
       "explanation": "Strømforsyningen tager strøm fra stikkontakten og sender den videre til alle de forskellige komponenter, der har brug for strøm."
@@ -195,10 +195,10 @@
       "type": "single_select",
       "question": "Hvad er formålet med en heat sink (køleplade) på en CPU?",
       "options": [
-        "At øge processorhastigheden",
-        "At trække varme væk fra processoren",
-        "At lagre midlertidige data",
-        "At forbinde CPU'en til netværket"
+        "At øge processorens clockhastighed",
+        "At lede varme væk fra processoren",
+        "At lagre processorens midlertidige data",
+        "At forsyne processoren med strøm"
       ],
       "correctAnswers": [1],
       "explanation": "Da CPU'en har tendens til at blive varm, dækkes den af et stykke metal kaldet en heat sink, der trækker varme væk fra processoren."
@@ -210,10 +210,10 @@
       "type": "multi_select",
       "question": "Hvilke af følgende udsagn om harddiske (HDD) er korrekte?",
       "options": [
-        "De er gode til at lagre store mængder data",
-        "De er hurtigere end SSD'er",
-        "Mange bruger en magnetisk plade (spinning disc) til at lagre data",
-        "Data slettes når computeren slukkes"
+        "De egner sig godt til at lagre store mængder data billigt",
+        "De er som regel hurtigere end SSD'er ved dataadgang",
+        "Mange bruger en magnetisk, roterende plade til at lagre data",
+        "Data forsvinder fra dem, så snart computeren slukkes"
       ],
       "correctAnswers": [0, 2],
       "explanation": "Harddiske er gode til at lagre meget data og bevarer data selv når computeren er slukket. Mange bruger en magnetisk, roterende plade, hvilket gør dem langsommere end SSD'er ved dataadgang."
@@ -225,10 +225,10 @@
       "type": "single_select",
       "question": "Hvad gør expansion slots (udvidelsesporte) på et bundkort muligt?",
       "options": [
-        "At køle computeren",
-        "At tilføje udvidelseskort som f.eks. video- eller trådløst kort",
-        "At forsyne med ekstra strøm",
-        "At forbinde til internettet trådløst uden hardware"
+        "At lede overskydende varme ud af kabinettet",
+        "At tilføje udvidelseskort som f.eks. grafik- eller trådløst kort",
+        "At forsyne bundkortet med ekstra strøm ved belastning",
+        "At forbinde computeren trådløst uden yderligere hardware"
       ],
       "correctAnswers": [1],
       "explanation": "På mange desktop-computere har bundkortet udvidelsesporte, der lader dig opgradere ved at tilføje udvidelseskort - f.eks. et grafikkort for bedre grafik eller et trådløst kort for at forbinde til wifi."
@@ -240,10 +240,10 @@
       "type": "single_select",
       "question": "Hvilken type kølesystem kan en computer typisk have?",
       "options": [
-        "Kun luftkøling",
-        "Kun væskekøling",
+        "Udelukkende luftkøling med blæsere",
+        "Udelukkende væskekøling med radiator",
         "Enten luftkøling eller væskekøling",
-        "Computere har ikke brug for køling"
+        "Moderne computere kræver ingen køling"
       ],
       "correctAnswers": [2],
       "explanation": "Områder som CPU og grafikkort genererer meget varme. En computer kan have enten luftkøling eller væskekøling, hver med sine egne fordele og ulemper."
@@ -255,10 +255,10 @@
       "type": "single_select",
       "question": "Hvad er et computerkabinet (case)?",
       "options": [
-        "En type processor",
-        "En plastik/metal-kasse hvor alle dele samles",
-        "Et program der styrer hardware",
-        "En type hukommelse"
+        "En processortype med indbygget køling",
+        "En plastik- eller metalkasse hvor alle dele samles",
+        "Et program der styrer computerens hardware",
+        "En hukommelsestype til midlertidige filer"
       ],
       "correctAnswers": [1],
       "explanation": "Et kabinet er en kasse, hvor alle dele placeres. De mest populære formater er mini tower, midtower og full tower afhængigt af størrelse."
@@ -270,10 +270,10 @@
       "type": "single_select",
       "question": "Hvorfor flyttes data fra harddisken til RAM under et loading-skærmbillede i et spil?",
       "options": [
-        "For at spare strøm",
-        "Så CPU'en kan tilgå data meget hurtigere under spillet",
-        "For at gemme data permanent",
-        "For at køle systemet ned"
+        "For at reducere computerens strømforbrug under spillet",
+        "Så CPU'en kan tilgå dataene langt hurtigere under spillet",
+        "For at gemme spillets fremskridt permanent på disken",
+        "For at sænke temperaturen i systemet undervejs"
       ],
       "correctAnswers": [1],
       "explanation": "Hver gang du ser et loading-skærmbillede i et spil, er det fordi CPU'en henter de nødvendige data fra harddisken til RAM, så den kan tilgå dem meget hurtigere mens du spiller."
@@ -285,10 +285,10 @@
       "type": "single_select",
       "question": "Hvad er et operativsystem (OS)?",
       "options": [
-        "En type hardware i computeren",
-        "Et system-software, der fungerer som interface mellem brugeren og hardwaren",
-        "Et antivirusprogram",
-        "En netværksprotokol"
+        "En fysisk komponent der styrer computerens hardware",
+        "System-software der er bindeled mellem bruger og hardware",
+        "Et program der beskytter mod virus og malware",
+        "Et regelsæt for kommunikation mellem enheder på netværket"
       ],
       "correctAnswers": [1],
       "explanation": "Et operativsystem er en system-software, der fungerer som et interface (mellemmand) mellem brugeren og computerens hardware, og som styrer eksekveringen af alle slags programmer."
@@ -312,7 +312,7 @@
       "options": [
         "Process management (processtyring)",
         "Memory management (hukommelsesstyring)",
-        "Fremstilling af hardware",
+        "Hardware fabrication (fremstilling af komponenter)",
         "File management (filstyring)"
       ],
       "correctAnswers": [0, 1, 3],
@@ -340,10 +340,10 @@
       "type": "single_select",
       "question": "Hvilken hukommelse bruger operativsystemet primært til memory management, når et program skal eksekveres?",
       "options": [
-        "Harddisken",
-        "RAM (primær/hovedhukommelse)",
-        "SSD'en",
-        "Grafikkortets hukommelse"
+        "Harddisken (sekundær lagring)",
+        "RAM (primær hovedhukommelse)",
+        "SSD'en (flash-lagring)",
+        "Grafikkortets videohukommelse (VRAM)"
       ],
       "correctAnswers": [1],
       "explanation": "Til memory management bruges den primære hukommelse (hovedhukommelsen), altså RAM (Random Access Memory). OS'et styrer hvor meget hukommelse en proces får, og hvornår den frigives."
@@ -357,8 +357,8 @@
       "options": [
         "Det skal være brugervenligt (user-friendly)",
         "Det skal være effektivt (efficient)",
-        "Det skal være gratis",
-        "Det skal være open source"
+        "Det skal være gratis at anskaffe og bruge",
+        "Det skal være open source og frit tilgængeligt"
       ],
       "correctAnswers": [0, 1],
       "explanation": "Et operativsystem skal være brugervenligt (let at interagere med) og effektivt (give maksimalt output med minimalt input samt bruge ressourcer effektivt - hurtigt og sikkert)."
@@ -385,10 +385,10 @@
       "type": "single_select",
       "question": "Hvorfor foretrækker de fleste brugere en grafisk brugerflade (GUI) frem for en kommandolinje?",
       "options": [
-        "GUI er hurtigere for computeren",
-        "GUI er lettere at arbejde med end at skrive kommandoer",
-        "GUI bruger mindre strøm",
-        "GUI er mere sikkert"
+        "GUI får computeren til at køre hurtigere",
+        "GUI er lettere at betjene end at skrive kommandoer",
+        "GUI bruger færre systemressourcer end en terminal",
+        "GUI er som udgangspunkt mere sikkert mod angreb"
       ],
       "correctAnswers": [1],
       "explanation": "At arbejde med en grafisk brugerflade (GUI) er langt lettere end at skrive kommandoer. Derfor vil de fleste vælge et OS, hvor man bare kan vælge en fil og klikke på en print-knap, fremfor at skrive en kommando."
@@ -400,10 +400,10 @@
       "type": "single_select",
       "question": "Hvad er hovedformålet med virtualiseringsservere i et datacenter?",
       "options": [
-        "At øge sikkerheden ved kryptering",
-        "At reducere mængden af fysisk hardware ved at lade én server hoste mange servere/operativsystemer",
-        "At lagre flere filer",
-        "At forbinde til internettet hurtigere"
+        "At øge sikkerheden gennem kryptering af serverne",
+        "At lade én fysisk server hoste mange virtuelle servere og OS'er",
+        "At udvide datacentrets samlede lagerkapacitet",
+        "At give datacentret en hurtigere internetforbindelse"
       ],
       "correctAnswers": [1],
       "explanation": "Virtualiseringsservere er meget populære, fordi de reducerer mængden af hardware i datacentre - én fysisk server kan hoste mange virtuelle servere og operativsystemer."
@@ -415,10 +415,10 @@
       "type": "single_select",
       "question": "Hyper-V er et eksempel på hvad?",
       "options": [
-        "Et antivirusprogram",
+        "Et antivirusprogram fra Microsoft",
         "Microsofts virtualiseringsplatform",
-        "En netværksprotokol",
-        "En type harddisk"
+        "En netværksprotokol til virtuelle maskiner",
+        "En type virtuel harddisk"
       ],
       "correctAnswers": [1],
       "explanation": "Hyper-V er Microsofts virtualiseringsplatform, som bruges til at hoste virtuelle maskiner på en fysisk server."
@@ -440,10 +440,10 @@
       "type": "single_select",
       "question": "Hvad er en switchs primære funktion på et netværk?",
       "options": [
-        "At forbinde netværket til internettet",
+        "At forbinde det lokale netværk ud til internettet",
         "At videresende data mod dets destination på netværket",
-        "At blokere uønsket trafik",
-        "At lagre filer"
+        "At blokere uønsket og skadelig trafik",
+        "At lagre netværkets delte filer centralt"
       ],
       "correctAnswers": [1],
       "explanation": "En switch er en netværksenhed, der er purpose-built til at flytte/videresende data mod dets destination på netværket."
@@ -455,10 +455,10 @@
       "type": "single_select",
       "question": "Hvad er forskellen mellem en switch og en router groft sagt?",
       "options": [
-        "En switch forbinder enheder på samme netværk, en router forbinder forskellige netværk",
-        "En router er hurtigere end en switch",
-        "En switch beskytter mod virus, en router gør ikke",
-        "Der er ingen forskel"
+        "En switch forbinder enheder på samme netværk; en router forbinder forskellige netværk",
+        "En router er altid hurtigere end en switch, uanset netværkets størrelse",
+        "En switch beskytter mod virus og malware; en router har ingen sikkerhed",
+        "En switch fungerer kun trådløst, mens en router udelukkende bruger kabel"
       ],
       "correctAnswers": [0],
       "explanation": "En switch flytter typisk data mellem enheder på samme lokale netværk, mens en router videresender data mellem forskellige netværk - f.eks. fra dit lokale netværk ud mod internettet."
@@ -470,10 +470,10 @@
       "type": "single_select",
       "question": "Hvad er en firewalls overordnede funktion på et netværk?",
       "options": [
-        "At dele filer mellem brugere",
-        "At kontrollere og videresende/blokere netværkstrafik for sikkerhed",
-        "At forsyne enheder med strøm",
-        "At lagre backups"
+        "At dele filer og ressourcer mellem netværkets brugere",
+        "At kontrollere og blokere/tillade netværkstrafik af sikkerhedshensyn",
+        "At forsyne netværkets enheder med strøm",
+        "At tage løbende backup af netværkets data"
       ],
       "correctAnswers": [1],
       "explanation": "En firewall er en netværksenhed i datatrafikkens vej, der har sit eget ansvar for at håndtere data - typisk ved at filtrere/blokere uønsket trafik af sikkerhedshensyn."
@@ -500,10 +500,10 @@
       "type": "single_select",
       "question": "Hvordan forbinder en trådløs enhed sig typisk til netværket?",
       "options": [
-        "Via en switch med kabel",
-        "Via et access point (AP) ved hjælp af radiofrekvens",
-        "Direkte til routeren med kabel",
-        "Via strømforsyningen"
+        "Via et netværkskabel til en switch i væggen",
+        "Via et access point (AP) ved hjælp af radiofrekvenser",
+        "Via et direkte kabel til routeren",
+        "Via et netværksmodul i strømforsyningen"
       ],
       "correctAnswers": [1],
       "explanation": "Trådløse enheder bruger radiofrekvenser (wifi) til at forbinde sig til et access point (AP), som så har fysisk forbindelse til resten af netværket."
@@ -525,10 +525,10 @@
       "type": "single_select",
       "question": "Hvad er en stor fordel ved at have et netværk i en organisation?",
       "options": [
-        "Computere bruger mindre strøm",
-        "Brugere kan dele ressourcer og tilgå servere uden at have al information lokalt",
-        "Computere bliver hurtigere",
-        "Man behøver ikke operativsystemer"
+        "Computerne på netværket bruger mindre strøm",
+        "Brugere kan dele ressourcer og tilgå servere uden alt lokalt",
+        "Hver enkelt computer kører automatisk hurtigere",
+        "Enhederne behøver ikke hver sit operativsystem"
       ],
       "correctAnswers": [1],
       "explanation": "En stor fordel ved netværk er, at man kan dele ressourcer og tilgå servere, der leverer indhold, uden at skulle have al information liggende på hver enkelt lokal computer."
@@ -553,7 +553,7 @@
         "Computer → router → switch → firewall → internet",
         "Computer → switch → router → firewall → router → internet",
         "Computer → firewall → switch → router → internet",
-        "Computer → internet direkte"
+        "Computer → router → firewall → switch → internet"
       ],
       "correctAnswers": [1],
       "explanation": "Trafikken fra Bobs computer går op til switchen, switchen videresender til routeren, routeren til firewallen, firewallen til den næste router og videre, indtil data når serveren."
@@ -565,10 +565,10 @@
       "type": "single_select",
       "question": "Hvor mange dele består en IPv4-adresse af (set som adresse), og hvad adskiller dem?",
       "options": [
-        "To dele adskilt af to punktummer",
+        "To tal adskilt af et enkelt punktum",
         "Fire tal adskilt af tre punktummer",
         "Tre tal adskilt af to punktummer",
-        "Et langt tal uden adskillelse"
+        "Ét sammenhængende tal uden adskillelse"
       ],
       "correctAnswers": [1],
       "explanation": "En IPv4-adresse består af fire tal adskilt af tre punktummer, hvor hvert tal kan være mellem 0 og 255."
@@ -580,10 +580,10 @@
       "type": "multi_select",
       "question": "En IPv4-adresse er opdelt i to logiske dele. Hvilke?",
       "options": [
-        "Network-delen (som en gadenavn)",
+        "Network-delen (som et gadenavn)",
         "Host-delen (som et husnummer)",
-        "Protocol-delen",
-        "MAC-delen"
+        "Protocol-delen (som et postnummer)",
+        "MAC-delen (som et telefonnummer)"
       ],
       "correctAnswers": [0, 1],
       "explanation": "En IPv4-adresse har to dele: network-portionen (som et gadenavn) og host-portionen (som et husnummer). Delelinjen mellem dem bestemmes af subnetmasken."
@@ -595,10 +595,10 @@
       "type": "single_select",
       "question": "Hvad er subnetmaskens (mask) job?",
       "options": [
-        "At kryptere IP-adressen",
-        "At identificere hvor delelinjen mellem network- og host-delen er",
-        "At forbinde til internettet",
-        "At tildele MAC-adresser"
+        "At kryptere indholdet af IP-adressen",
+        "At markere hvor grænsen mellem network- og host-delen går",
+        "At forbinde enheden til internettet",
+        "At tildele enheden en fysisk MAC-adresse"
       ],
       "correctAnswers": [1],
       "explanation": "Subnetmaskens (eller netværksmaskens) 100% job er at identificere, hvor delelinjen mellem network-portionen og host-portionen i en IP-adresse er."
@@ -613,7 +613,7 @@
         "Kun det første tal (10)",
         "De første to tal (10.10)",
         "De første tre tal (10.10.10)",
-        "Hele adressen"
+        "Hele adressen (10.10.10.10)"
       ],
       "correctAnswers": [1],
       "explanation": "Hvor masken er 255, dér er det network. Med 255.255.0.0 er de første to tal (10.10) network-delen, og de sidste to tal (de nulstillede 0.0) er host-adressen."
@@ -628,7 +628,7 @@
         "Kun det sidste tal (9)",
         "De sidste tre tal (4.6.9)",
         "De første to tal (13.4)",
-        "Hele adressen"
+        "Hele adressen (13.4.6.9)"
       ],
       "correctAnswers": [1],
       "explanation": "Da 255 står i første position, er det første tal (13) network. De sidste tre tal i masken er nuller, så de sidste tre tal i adressen (4.6.9) er til host-adressering."
@@ -650,10 +650,10 @@
       "type": "single_select",
       "question": "Hvorfor skal network-portionen være ens for enheder på samme netværk?",
       "options": [
-        "For at de kan bruge samme strøm",
-        "For at de kan kommunikere med hinanden uden duplikerede adresser",
-        "For at de kan dele samme operativsystem",
-        "Det er ikke nødvendigt"
+        "For at de kan dele den samme strømforsyning",
+        "For at de kan kommunikere uden duplikerede adresser",
+        "For at de kan køre det samme operativsystem",
+        "For at de kan dele den samme MAC-adresse"
       ],
       "correctAnswers": [1],
       "explanation": "Network-portionen skal være ens for alle der bor på samme netværk (samme 'gade'), så de kan kommunikere med hinanden, mens de individuelle hosts har unikke host-adresser, så der ikke er duplikerede layer 3-adresser."
@@ -680,10 +680,10 @@
       "type": "single_select",
       "question": "Hvad gør ARP grundlæggende?",
       "options": [
-        "Oversætter et domænenavn til en IP-adresse",
-        "Finder en enheds layer 2 (MAC)-adresse ud fra dens IP-adresse på det lokale netværk",
-        "Krypterer netværkstrafik",
-        "Tildeler IP-adresser til enheder"
+        "Oversætter et menneskeligt domænenavn til den tilhørende IP-adresse",
+        "Finder en enheds MAC-adresse ud fra dens IP-adresse på det lokale netværk",
+        "Krypterer al trafikken der sendes mellem to enheder på netværket",
+        "Tildeler automatisk en ledig IP-adresse til nye enheder på netværket"
       ],
       "correctAnswers": [1],
       "explanation": "ARP bruges til at finde en anden computers layer 2-adresse (MAC-adresse) på samme netværk, når man kender dens IP-adresse. Det gøres ved en broadcast-forespørgsel, som den rette enhed svarer på."
@@ -695,10 +695,10 @@
       "type": "single_select",
       "question": "Hvordan finder en computer en anden enheds MAC-adresse via ARP, hvis den ikke kender den?",
       "options": [
-        "Den spørger DNS-serveren",
-        "Den sender en broadcast-forespørgsel, som alle på netværket ser, og den rette enhed svarer",
-        "Den gætter adressen",
-        "Den kontakter routeren direkte"
+        "Den slår adressen op hos netværkets DNS-server",
+        "Den sender en broadcast, og den rette enhed svarer med sin MAC-adresse",
+        "Den henter adressen fra routerens ARP-tabel automatisk",
+        "Den prøver sig systematisk frem indtil én enhed svarer"
       ],
       "correctAnswers": [1],
       "explanation": "Hvis computeren ikke kender den anden enheds layer 2-adresse, sender den en broadcast-forespørgsel ud, som alle på det lokale netværk ser. Enheden, der ejer den IP-adresse, svarer tilbage med sin MAC-adresse."
@@ -720,10 +720,10 @@
       "type": "single_select",
       "question": "Hvilken type adresse er en MAC-adresse?",
       "options": [
-        "En logisk layer 3-adresse",
-        "En fysisk/burned-in layer 2-adresse på netværkskortet",
-        "En applikationsadresse",
-        "En portnummer-adresse"
+        "En logisk adresse der tildeles på layer 3",
+        "En fysisk, indbygget layer 2-adresse på netværkskortet",
+        "En adresse der identificerer en bestemt applikation",
+        "Et portnummer der bruges på transportlaget"
       ],
       "correctAnswers": [1],
       "explanation": "En MAC-adresse (Media Access Control) er en fysisk, burned-in adresse på netværkskortet og arbejder på layer 2."
@@ -780,13 +780,13 @@
       "type": "multi_select",
       "question": "I et /24-netværk som 192.168.0.0/24 er to adresser ikke brugbare som host-adresser. Hvilke?",
       "options": [
-        "Den første (netværkets ID)",
-        "Den anden adresse",
-        "Den sidste (broadcast address)",
-        "Den midterste adresse"
+        "Den første adresse (netværkets ID)",
+        "Den anden adresse (standard-gateway)",
+        "Den sidste adresse (broadcast)",
+        "Den midterste adresse (reserveret)"
       ],
       "correctAnswers": [0, 2],
-      "explanation": "Af de 256 mulige adresser er den første netværkets ID og den sidste er broadcast address. Derfor er der 254 brugbare host-adresser tilbage."
+      "explanation": "Af de 256 mulige adresser er den første netværkets ID og den sidste er broadcast address. Derfor er der 254 brugbare host-adresser tilbage. (Bemærk: en gateway bruger en helt almindelig brugbar host-adresse - den er ikke reserveret af protokollen.)"
     },
     {
       "id": 58,
@@ -795,10 +795,10 @@
       "type": "single_select",
       "question": "Hvad er hovedformålet med kryptering (encryption)?",
       "options": [
-        "At komprimere data så den fylder mindre",
-        "At scramble/forvrænge data, så uautoriserede ikke kan læse den",
-        "At slette data sikkert",
-        "At gøre data hurtigere at sende"
+        "At komprimere data så den fylder mindre på disken",
+        "At forvrænge data så uautoriserede ikke kan læse den",
+        "At slette data permanent og uigenkaldeligt",
+        "At sende data hurtigere gennem netværket"
       ],
       "correctAnswers": [1],
       "explanation": "Kryptering scrambler/forvrænger data, så uautoriserede personer ikke kan læse den eller give mening af den. Det er en vigtig måde at holde data fortrolig på."
@@ -810,10 +810,10 @@
       "type": "single_select",
       "question": "Hvad er forskellen på 'data at rest' og 'data in transit'?",
       "options": [
-        "Data at rest er krypteret, data in transit er ikke",
-        "Data at rest ligger lagret (f.eks. på disk), data in transit bevæger sig gennem netværket",
-        "Der er ingen forskel",
-        "Data at rest er hurtigere"
+        "Data at rest er altid krypteret, data in transit er det aldrig",
+        "Data at rest ligger lagret, data in transit bevæger sig på netværket",
+        "Data at rest er offentlig, mens data in transit altid er privat",
+        "Data at rest er hurtigere at tilgå end data in transit"
       ],
       "correctAnswers": [1],
       "explanation": "Data at rest er information, der ligger lagret på f.eks. en disk eller et flashdrev. Data in transit er information, der bevæger sig gennem netværket."
@@ -825,10 +825,10 @@
       "type": "single_select",
       "question": "Hvad står TLS for, og hvad bruges det især til?",
       "options": [
-        "Transport Layer Security - kryptering og verifikation ved forbindelse til websites",
-        "Total Link System - at forbinde netværk",
-        "Transmission Local Service - intern filoverførsel",
-        "Trusted Login Standard - login på computere"
+        "Transport Layer Security – kryptering og verifikation ved websites",
+        "Total Link Security – sikring af fysiske kabelforbindelser",
+        "Transmission Layer System – styring af intern filoverførsel",
+        "Trusted Login Service – håndtering af login på computere"
       ],
       "correctAnswers": [0],
       "explanation": "TLS står for Transport Layer Security (efterfølger til SSL). Det giver kryptering og fortrolighed når man forbinder fra en computer til et website, og hjælper også med at verificere, at man taler med det rigtige site og ikke et hacker-site."
@@ -840,10 +840,10 @@
       "type": "single_select",
       "question": "Hvad står IPSec for / bruges til?",
       "options": [
-        "Internet Provider Security - at vælge ISP",
-        "At sikre (secure) IP-trafik / data in motion",
-        "Intern Password Security - at gemme kodeord",
-        "IP Selection - at vælge IP-adresse"
+        "Internet Provider Security – at vælge internetudbyder",
+        "Securing IP – at beskytte IP-trafik / data in motion",
+        "Internal Password Security – at gemme kodeord sikkert",
+        "IP Selection – at vælge enhedens IP-adresse"
       ],
       "correctAnswers": [1],
       "explanation": "IPSec betyder i bund og grund 'securing IP' - altså at sikre IP-trafik. Det er en populær metode til at beskytte data in motion (data der bevæger sig)."
@@ -855,10 +855,10 @@
       "type": "single_select",
       "question": "Hvad er den vigtigste egenskab ved en hash-funktion i forhold til kryptering?",
       "options": [
-        "En hash kan altid dekrypteres tilbage til original",
-        "En hash er en envejs-funktion (kan ikke vendes tilbage til den oprindelige data)",
-        "En hash er hurtigere end al kryptering",
-        "En hash kræver altid en nøgle for at læses"
+        "En hash kan altid dekrypteres tilbage til originalen",
+        "En hash er en envejsfunktion, der ikke kan vendes tilbage",
+        "En hash er altid hurtigere at beregne end kryptering",
+        "En hash kræver altid en hemmelig nøgle for at kunne læses"
       ],
       "correctAnswers": [1],
       "explanation": "Hashing er en envejs-funktion: man kan ikke vende en hash tilbage til den oprindelige data. Det bruges bl.a. til at gemme kodeord og verificere integritet, hvilket er forskelligt fra kryptering, som er designet til at kunne dekrypteres med en nøgle."
@@ -870,10 +870,10 @@
       "type": "single_select",
       "question": "Hvad bruges hashing typisk til, når det gælder kodeord?",
       "options": [
-        "At sende kodeord i klartekst",
-        "At gemme kodeord som en hash i stedet for i klartekst, så de ikke kan læses direkte",
-        "At gøre kodeord længere",
-        "At kryptere hele harddisken"
+        "At sende kodeordet i klartekst over netværket",
+        "At gemme kodeordet som en hash i stedet for i klartekst",
+        "At gøre kodeordet længere og mere komplekst",
+        "At kryptere hele harddisken hvor kodeordene ligger"
       ],
       "correctAnswers": [1],
       "explanation": "Hashing bruges til at gemme kodeord sikkert: i stedet for at gemme kodeordet i klartekst gemmer man en hash af det. Ved login hashes det indtastede kodeord og sammenlignes med den gemte hash."
@@ -885,10 +885,10 @@
       "type": "single_select",
       "question": "Hvad menes der med 'two-factor authentication' (2FA)?",
       "options": [
-        "At man bruger to forskellige kodeord",
-        "At man kombinerer to forskellige faktorer, f.eks. noget man ved (pinkode) og noget man har (smartcard)",
-        "At to personer skal godkende login",
-        "At man logger ind to gange"
+        "At man skal indtaste to forskellige kodeord efter hinanden",
+        "At man kombinerer to faktorer – f.eks. noget man ved og noget man har",
+        "At to forskellige personer skal godkende det samme login",
+        "At man logger ind to gange på to forskellige enheder"
       ],
       "correctAnswers": [1],
       "explanation": "Two-factor authentication kombinerer to forskellige faktorer - f.eks. noget brugeren ved (en pinkode eller et password) sammen med noget brugeren har (et smartcard med en chip eller et digitalt certifikat). Begge faktorer kræves for at logge ind."
@@ -900,10 +900,10 @@
       "type": "single_select",
       "question": "Hvad er cybersikkerhed grundlæggende?",
       "options": [
-        "At gøre computere hurtigere",
-        "At beskytte systemer, netværk og applikationer mod digitale angreb eller kompromittering",
-        "At installere flere programmer",
-        "At opgradere hardware"
+        "At optimere computere til at køre så hurtigt som muligt",
+        "At beskytte systemer, netværk og applikationer mod digitale angreb",
+        "At installere så mange sikkerhedsprogrammer som muligt",
+        "At opgradere hardware løbende for at undgå nedbrud"
       ],
       "correctAnswers": [1],
       "explanation": "Cybersikkerhed handler grundlæggende om at beskytte vores systemer, netværk og applikationer mod enhver form for digitalt angreb eller kompromittering."
@@ -915,10 +915,10 @@
       "type": "single_select",
       "question": "Hvad er forskellen på authentication og authorization?",
       "options": [
-        "De betyder det samme",
-        "Authentication identificerer hvem en person/entitet er; authorization styrer hvad de må gøre",
-        "Authentication styrer hvad man må; authorization identificerer hvem man er",
-        "Authentication er kun for servere"
+        "De to begreber dækker reelt over præcis det samme",
+        "Authentication identificerer hvem man er; authorization hvad man må",
+        "Authentication styrer hvad man må; authorization hvem man er",
+        "Authentication gælder kun servere, authorization kun brugere"
       ],
       "correctAnswers": [1],
       "explanation": "Authentication handler om at identificere hvem en person eller entitet er (f.eks. via password eller 2FA). Authorization handler om at kontrollere hvad de er tilladt at gøre, baseret på deres rettigheder og tilladelser."
@@ -932,8 +932,8 @@
       "options": [
         "Authentication og authorization",
         "Encryption (kryptering)",
-        "Defragmentering",
-        "Overclocking"
+        "Defragmentering af harddisken",
+        "Overclocking af processoren"
       ],
       "correctAnswers": [0, 1],
       "explanation": "Authentication og authorization sikrer, at kun autoriserede kan tilgå og ændre data. Encryption (kryptering) sikrer, at uautoriserede ikke kan læse følsom information. Defragmentering og overclocking har intet med dette at gøre."
@@ -945,10 +945,10 @@
       "type": "single_select",
       "question": "Hvorfor beskrives brugere ofte som 'det svageste led' i sikkerhed?",
       "options": [
-        "Fordi de skriver dårlig kode",
-        "Fordi de f.eks. kan klikke på links i phishing-mails og installere malware",
-        "Fordi de bruger for meget strøm",
-        "Fordi de ikke kender til hardware"
+        "Fordi de ofte skriver usikker programkode",
+        "Fordi de kan klikke på phishing-links og installere malware",
+        "Fordi de bruger for mange af systemets ressourcer",
+        "Fordi de sjældent kender til computerens hardware"
       ],
       "correctAnswers": [1],
       "explanation": "Brugere er ofte det svageste led, fordi de f.eks. kan modtage en phishing-mail, klikke på et link og installere ondsindet software. Derfor er løbende uddannelse en stor del af cybersikkerhed."
@@ -963,10 +963,10 @@
         "Før: identificere sårbarheder og lægge modforanstaltninger ind",
         "Under: respondere, inddæmme og minimere skaden",
         "Efter: forensics/undersøgelser og lessons learned",
-        "Før: betale ransom på forhånd"
+        "Efter: betale løsesum for at undgå fremtidige angreb"
       ],
       "correctAnswers": [0, 1, 2],
-      "explanation": "Før et angreb: identificér sårbarheder og indfør modforanstaltninger. Under: respondér, inddæm og minimér skaden med henblik på at genoprette funktionalitet. Efter: udfør forensics/undersøgelser og lær af det for at forhindre lignende angreb."
+      "explanation": "Før et angreb: identificér sårbarheder og indfør modforanstaltninger. Under: respondér, inddæm og minimér skaden med henblik på at genoprette funktionalitet. Efter: udfør forensics/undersøgelser og lær af det for at forhindre lignende angreb. At betale løsesum er ikke en anbefalet fase-handling."
     },
     {
       "id": 70,
@@ -975,10 +975,10 @@
       "type": "single_select",
       "question": "Hvorfor blev der i 80'erne flere mulige 'attack vectors' end tidligere?",
       "options": [
-        "Fordi computere blev billigere",
-        "Fordi man begyndte at netværke og forbinde enheder (LAN og senere wifi) og fordele systemer i stedet for centraliserede mainframes",
-        "Fordi der kom flere operativsystemer",
-        "Fordi harddiske blev større"
+        "Fordi computere blev markant billigere og dermed langt mere udbredte",
+        "Fordi man begyndte at netværke enheder (LAN, senere wifi) og fordele systemer",
+        "Fordi der opstod mange nye og indbyrdes konkurrerende operativsystemer",
+        "Fordi harddiske fik langt større kapacitet og kunne rumme mere data"
       ],
       "correctAnswers": [1],
       "explanation": "I de tidlige dage var der lukkede systemer med begrænset adgang (mainframes via terminal). I 80'erne begyndte man at netværke og forbinde enheder - først kablede LAN, senere wifi - og at fordele systemer i stedet for centraliserede. Det gav flere mulige attack vectors."
@@ -990,10 +990,10 @@
       "type": "single_select",
       "question": "Hvad menes typisk med en 'White Hat' hacker?",
       "options": [
-        "En kriminel hacker, der stjæler data for egen vinding",
-        "En etisk hacker, der med tilladelse tester systemers sikkerhed for at hjælpe med at forbedre den",
-        "En hacker der kun angriber hvide computere",
-        "En hacker uden tekniske evner"
+        "En kriminel hacker der stjæler data for egen vinding",
+        "En etisk hacker der med tilladelse tester og forbedrer sikkerheden",
+        "En hacker der arbejder for en udenlandsk efterretningstjeneste",
+        "En nybegynder der hacker uden særlige tekniske evner"
       ],
       "correctAnswers": [1],
       "explanation": "En White Hat er en etisk hacker, der typisk med tilladelse tester systemers sikkerhed for at finde og hjælpe med at lukke sårbarheder. Værktøjer som Kali Linux bruges netop til denne form for etisk hacking."
@@ -1005,10 +1005,10 @@
       "type": "single_select",
       "question": "Hvad menes typisk med en 'Black Hat' hacker?",
       "options": [
-        "En hacker, der bryder ind i systemer ulovligt med ondsindet eller egennyttig hensigt",
-        "En sikkerhedskonsulent ansat af firmaet",
-        "En der kun arbejder om natten",
-        "En der reparerer hardware"
+        "En ondsindet hacker der ulovligt bryder ind for egen vinding",
+        "En sikkerhedskonsulent ansat til at teste firmaets systemer",
+        "En hacker der udelukkende arbejder om natten i skjul",
+        "En tekniker der reparerer hacket hardware igen"
       ],
       "correctAnswers": [0],
       "explanation": "En Black Hat er en ondsindet hacker, der bryder ind i systemer ulovligt - typisk for egen vinding, for at stjæle data eller forårsage skade - i modsætning til en White Hat, der hacker etisk og med tilladelse."
@@ -1020,10 +1020,10 @@
       "type": "single_select",
       "question": "Hvad er en 'Threat Actor' i cybersikkerhed?",
       "options": [
-        "Et antivirusprogram",
-        "En person, gruppe eller entitet der står bag en sikkerhedstrussel eller et angreb",
-        "En firewall-regel",
-        "En type kryptering"
+        "Et avanceret antivirusprogram der opdager og fjerner trusler på systemet",
+        "En person, gruppe eller entitet der står bag en trussel eller et angreb",
+        "En firewall-regel der automatisk blokerer mistænkelig indgående trafik",
+        "En krypteringsmetode der skjuler et angreb for sikkerhedssystemerne"
       ],
       "correctAnswers": [1],
       "explanation": "En 'Threat Actor' er en person, gruppe eller entitet, der står bag en cybertrussel eller et angreb - altså den der udgør truslen mod systemer, netværk eller data."
@@ -1035,10 +1035,10 @@
       "type": "single_select",
       "question": "Hvad er et 'Man in the Middle' (MitM) angreb?",
       "options": [
-        "Et angreb hvor angriberen oversvømmer en server med trafik",
-        "Et angreb hvor angriberen i hemmelighed placerer sig mellem to parter og aflytter eller manipulerer kommunikationen",
-        "Et angreb hvor man gætter kodeord",
-        "Et fysisk indbrud i et serverrum"
+        "Et angreb der oversvømmer en server med enorme mængder trafik",
+        "Et angreb hvor man skjult placerer sig mellem to parter og aflytter dem",
+        "Et angreb hvor man systematisk gætter brugerens kodeord",
+        "Et fysisk indbrud i virksomhedens serverrum"
       ],
       "correctAnswers": [1],
       "explanation": "Et Man in the Middle-angreb er, hvor angriberen i hemmelighed placerer sig mellem to kommunikerende parter for at aflytte, opfange eller manipulere kommunikationen, ofte uden at parterne opdager det."
@@ -1050,10 +1050,10 @@
       "type": "single_select",
       "question": "Hvad er 'IP Spoofing'?",
       "options": [
-        "At kryptere sin IP-adresse",
-        "At forfalske kilde-IP-adressen i pakker, så de ser ud til at komme fra en anden (betroet) kilde",
-        "At skifte sin fysiske placering",
-        "At tildele sig selv en ny IP fra DHCP"
+        "At kryptere sin egen IP-adresse for at være fuldstændig anonym online",
+        "At forfalske kilde-IP'en så pakker ser ud til at komme fra en betroet kilde",
+        "At skjule sin fysiske placering ved at lede trafikken gennem en VPN",
+        "At skaffe sig en helt ny IP-adresse automatisk fra netværkets DHCP-server"
       ],
       "correctAnswers": [1],
       "explanation": "IP Spoofing er at forfalske kilde-IP-adressen i netværkspakker, så de fremstår som om de kommer fra en anden, ofte betroet, kilde. Det bruges bl.a. til at skjule angriberens identitet eller omgå adgangskontrol."
@@ -1065,10 +1065,10 @@
       "type": "single_select",
       "question": "Hvad er social engineering?",
       "options": [
-        "En type netværkskabel",
-        "Psykologisk manipulation af mennesker til at udføre handlinger eller afsløre fortrolig information",
-        "En programmeringsteknik",
-        "En metode til at bygge servere"
+        "En særlig type netværkskabel der er beregnet til meget lange afstande",
+        "Psykologisk manipulation af mennesker til at afsløre fortrolig information",
+        "En programmeringsteknik til at skrive markant mere sikker og robust kode",
+        "En anerkendt metode til at opbygge robuste og fejltolerante servere"
       ],
       "correctAnswers": [1],
       "explanation": "Social engineering er den psykologiske manipulation af mennesker til at udføre handlinger eller afsløre fortrolig information. Det er ikke en teknisk malware, men en udbredt metode til at installere malware eller skaffe sig adgang. Phishing er et eksempel."
@@ -1080,10 +1080,10 @@
       "type": "single_select",
       "question": "Hvad er malware?",
       "options": [
-        "Et lovligt program der forbedrer ydeevne",
-        "Alt der med vilje er designet til at forstyrre, lække information, skaffe uautoriseret adgang eller skade en computer",
-        "En type hardware",
-        "Et operativsystem"
+        "Et fuldt lovligt program der forbedrer computerens ydeevne og hastighed",
+        "Software designet til at skade, lække data eller skaffe uautoriseret adgang",
+        "En fysisk hardwarefejl der opstår tilfældigt i computerens komponenter",
+        "Et specialiseret operativsystem der udelukkende bruges til sikkerhedstest"
       ],
       "correctAnswers": [1],
       "explanation": "Malware er alt, der med vilje er designet til at forårsage forstyrrelse, lække privat information, skaffe uautoriseret adgang, fratage adgang til information eller på anden vis kompromittere brugerens sikkerhed og privatliv."
@@ -1095,10 +1095,10 @@
       "type": "single_select",
       "question": "Hvad kendetegner en computervirus?",
       "options": [
-        "Den er et selvstændigt program der spreder sig selv over netværk",
-        "Den replikerer sig ved at indsætte sin egen kode i andre programmer (kræver et host-program)",
-        "Den skader aldrig systemet",
-        "Den er altid synlig for brugeren"
+        "Et selvstændigt program der selv spreder sig over netværk",
+        "Malware der indsætter sin egen kode i andre programmer (kræver en host)",
+        "Et program der altid er synligt og helt harmløst",
+        "En fejl der opstår tilfældigt i operativsystemet"
       ],
       "correctAnswers": [1],
       "explanation": "En computervirus er malware, der ved eksekvering replikerer sig selv ved at modificere andre programmer og indsætte sin egen kode i dem. Den kræver et host-program, og når host'en køres, eksekveres viruskoden og forårsager infektion og skade."
@@ -1110,10 +1110,10 @@
       "type": "single_select",
       "question": "Hvad er den væsentlige forskel mellem en virus og en orm (worm)?",
       "options": [
-        "En orm kræver et host-program, en virus gør ikke",
-        "En orm er et selvstændigt program, der spreder sig selv (ofte over netværk) uden at kræve et host-program",
-        "En orm kan ikke sprede sig",
-        "Der er ingen forskel"
+        "En orm kræver en host-fil; en virus spreder sig helt selv",
+        "En orm er selvstændig og spreder sig selv uden en host-fil",
+        "En orm kan slet ikke replikere eller sprede sig videre",
+        "En orm rammer kun servere, mens en virus kun rammer klienter"
       ],
       "correctAnswers": [1],
       "explanation": "En orm er et selvstændigt (standalone) malware-program, der replikerer sig selv for at sprede sig til andre computere - oftest over netværk ved at udnytte sikkerhedshuller. En virus kræver derimod et host-program at indsætte sin kode i."
@@ -1125,10 +1125,10 @@
       "type": "single_select",
       "question": "Hvad kendetegner en Trojansk hest (Trojan)?",
       "options": [
-        "Den replikerer sig selv ind i andre filer",
-        "Den narrer brugeren ved at udgive sig for at være et normalt/harmløst program",
-        "Den spreder sig kun over netværk",
-        "Den er altid harmløs"
+        "Den replikerer sin egen kode ind i andre filer automatisk",
+        "Den narrer brugeren ved at udgive sig for et harmløst program",
+        "Den spreder sig udelukkende via netværksforbindelser",
+        "Den er en harmløs testfil uden nogen skadelig effekt"
       ],
       "correctAnswers": [1],
       "explanation": "En Trojansk hest er malware, der vildleder brugeren om sin sande hensigt ved at udgive sig for at være et standard/harmløst program. Den spredes typisk via social engineering. I modsætning til virus og orme forsøger trojanere normalt ikke at replikere sig selv."
@@ -1140,10 +1140,10 @@
       "type": "single_select",
       "question": "Hvad gør ransomware?",
       "options": [
-        "Viser reklamer",
-        "Blokerer adgang til ofrets data/computer (ofte ved kryptering) og kræver løsepenge for at låse op",
-        "Gør computeren hurtigere",
-        "Sletter al data uden krav om betaling"
+        "Viser uønskede reklamer i pop op-vinduer",
+        "Blokerer adgang til data (ofte ved kryptering) og kræver løsepenge",
+        "Optimerer computerens hastighed mod en betaling",
+        "Sletter al data uden at kræve nogen form for betaling"
       ],
       "correctAnswers": [1],
       "explanation": "Ransomware er malware, der blokerer adgang til ofrets data og computer, indtil der betales løsepenge. Avanceret ransomware bruger 'cryptoviral extortion', hvor den krypterer ofrets filer og kræver betaling for at dekryptere dem."
@@ -1155,10 +1155,10 @@
       "type": "single_select",
       "question": "Hvad er spyware?",
       "options": [
-        "Software der beskytter dit privatliv",
-        "Malware der i hemmelighed indsamler information om dig (besøgte sites, kodeord, betalingsinfo m.m.)",
-        "En type firewall",
-        "Et backupprogram"
+        "Software der beskytter dit privatliv mens du er online",
+        "Malware der i skjul indsamler information om dig (sites, kodeord m.m.)",
+        "En firewall der overvåger og logger indgående trafik",
+        "Et backupprogram der løbende spejler dine filer"
       ],
       "correctAnswers": [1],
       "explanation": "Spyware er malware, der inficerer din computer og i hemmelighed indsamler information om dig - bl.a. besøgte sites, downloads, brugernavne, kodeord, betalingsinformation og e-mails. Informationen sendes typisk til en cyberkriminel."
@@ -1170,10 +1170,10 @@
       "type": "single_select",
       "question": "Hvad er en keylogger?",
       "options": [
-        "Et program der logger ind for dig",
-        "Malware der i hemmelighed registrerer hvert tastetryk og sender det til en cyberkriminel",
-        "Et tastatur med ekstra taster",
-        "Et program der låser tastaturet"
+        "Et hjælpeprogram der automatisk logger dig ind på dine konti",
+        "Malware der i skjul registrerer hvert tastetryk og sender det videre",
+        "Et fysisk specialtastatur med ekstra programmerbare genvejstaster",
+        "Et program der automatisk låser tastaturet efter en periodes inaktivitet"
       ],
       "correctAnswers": [1],
       "explanation": "En keylogger er malware, der i hemmelighed registrerer hvert tastetryk på tastaturet og sender det til den cyberkriminelle. Det er en type spyware, og især kodeord og fortrolig information kan stjæles på den måde."
@@ -1200,10 +1200,10 @@
       "type": "single_select",
       "question": "Hvad er et DDoS-angreb?",
       "options": [
-        "Et angreb hvor en computer eller forbindelse gøres utilgængelig ved at oversvømme den med trafik fra mange kilder",
-        "Et angreb der stjæler kodeord",
-        "Et angreb der krypterer dine filer",
-        "Et angreb der viser reklamer"
+        "Et angreb der gør et mål utilgængeligt ved at oversvømme det med trafik fra mange kilder",
+        "Et angreb der stjæler brugerens kodeord ved i skjul at aflytte forbindelsen",
+        "Et angreb der krypterer alle ofrets filer og kræver løsepenge for nøglen",
+        "Et angreb der oversvømmer ofrets browser med påtrængende reklamer og pop-ups"
       ],
       "correctAnswers": [0],
       "explanation": "Et DDoS-angreb (Distributed Denial of Service) gør en computer eller forbindelse utilgængelig ved at oversvømme målet med overflødig trafik for at overbelaste det. Trafikken kommer fra mange forskellige kilder, ofte inficerede computere brugt som bots i et botnet."
@@ -1215,10 +1215,10 @@
       "type": "single_select",
       "question": "Hvad er phishing (fishing)?",
       "options": [
-        "En metode til at fange netværkspakker",
-        "En svindelmetode hvor angribere narrer folk til at afsløre følsom information eller installere malware, ofte via mails der ligner en troværdig kilde",
-        "En type kryptering",
-        "Et lovligt marketingsværktøj"
+        "En teknik til at opfange og analysere netværkspakker",
+        "Svindel hvor folk narres til at afsløre info via troværdigt udseende mails",
+        "En krypteringsmetode der beskytter indholdet af e-mails",
+        "Et lovligt værktøj til markedsføring og nyhedsbreve via mail"
       ],
       "correctAnswers": [1],
       "explanation": "Phishing er svindel, hvor angribere narrer folk til at afsløre følsom information eller installere malware. Det sker ofte via mail, hvor angriberen udgiver sig for en troværdig kilde (f.eks. din bank) og sender ofret til et website, der efterligner det rigtige."
@@ -1230,10 +1230,10 @@
       "type": "single_select",
       "question": "Hvad er en rootkit?",
       "options": [
-        "Et antivirusprogram",
-        "Et program/værktøjssæt der giver en trussel-aktør fjernadgang og kontrol over en computer, ofte ved at åbne en bagdør og undgå detektion",
-        "En type netværkskabel",
-        "Et backupværktøj"
+        "Et avanceret antivirusprogram der scanner systemets vigtigste rootfiler",
+        "Et værktøjssæt der giver skjult fjernadgang og kontrol over en computer",
+        "En central netværkskomponent der forbinder flere routere med hinanden",
+        "Et backupværktøj der løbende sikrer kopier af systemets vigtigste filer"
       ],
       "correctAnswers": [1],
       "explanation": "En rootkit er et program eller en samling af ondsindede værktøjer, der giver en trussel-aktør fjernadgang og kontrol over en computer. De fleste rootkits åbner en bagdør og undgår ofte detektion ved at deaktivere antivirus. De kan være meget svære at fjerne, især hvis de ligger i kernen (kernel)."
@@ -1245,10 +1245,10 @@
       "type": "single_select",
       "question": "Hvad er en backdoor (bagdør) i sikkerhedssammenhæng?",
       "options": [
-        "En fysisk dør til serverrummet",
-        "Enhver metode til at omgå normale sikkerhedsforanstaltninger",
-        "Et lovligt loginvindue",
-        "En type firewall"
+        "En fysisk bagindgang til virksomhedens serverrum",
+        "Enhver skjult metode til at omgå normale sikkerhedsforanstaltninger",
+        "Et lovligt login-vindue forbeholdt administratorer",
+        "En type firewall der filtrerer udgående trafik"
       ],
       "correctAnswers": [1],
       "explanation": "En backdoor er enhver metode, hvormed autoriserede og uautoriserede brugere kan omgå normale sikkerhedsforanstaltninger. Cyberkriminelle kan bruge en bagdør til at stjæle data, installere mere malware og overtage enheder."
@@ -1260,10 +1260,10 @@
       "type": "single_select",
       "question": "Hvad kendetegner 'fileless malware'?",
       "options": [
-        "Den gemmes på harddisken som en skjult fil",
-        "Den findes udelukkende i hukommelsen (f.eks. RAM) og skriver ikke til harddisken, hvilket gør den svær at opdage",
-        "Den kan ikke skade systemet",
-        "Den kræver altid en fil for at køre"
+        "Den gemmer sig som en skjult fil på harddisken",
+        "Den lever kun i hukommelsen (RAM) og rører ikke harddisken",
+        "Den er harmløs og kan ikke skade systemet",
+        "Den kræver altid en eksekverbar fil for at kunne køre"
       ],
       "correctAnswers": [1],
       "explanation": "Fileless malware findes udelukkende som hukommelsesbaseret malware (f.eks. i RAM) og skriver ikke noget af sin aktivitet til harddisken. Det gør den sværere at opdage og efterlader få spor; den slettes ofte når computeren genstartes."
@@ -1275,10 +1275,10 @@
       "type": "single_select",
       "question": "Hvad er adware?",
       "options": [
-        "Software der beskytter mod reklamer",
-        "Malware der installerer sig uden brugerens viden og viser reklamer, nogle gange også indsamler data",
-        "Et lovligt antivirusprogram",
-        "En type hardware"
+        "Et nyttigt program der blokerer reklamer og sporing i browseren mens man surfer",
+        "Malware der i skjul installeres og viser reklamer, nogle gange indsamler data",
+        "Et fuldt lovligt og licensbetalt antivirusprogram til både hjemme- og erhvervsbrug",
+        "En fysisk hardwarekomponent der håndterer computerens grafikvisning"
       ],
       "correctAnswers": [1],
       "explanation": "Adware er typisk malware, der installerer sig selv uden brugerens viden (ofte ved download af anden software) og viser reklamer, når brugeren surfer. Nogle fungerer også som spyware ved at indsamle data, og de mest genkendelige åbner pop-ups i et vindue, der ikke kan lukkes."
@@ -1290,10 +1290,10 @@
       "type": "single_select",
       "question": "Hvad er et brute force-angreb?",
       "options": [
-        "Et fysisk angreb på hardware",
-        "At angriberen systematisk afprøver mange kodeord/passphrases (ofte automatiseret) indtil det rigtige findes",
-        "Et angreb der krypterer filer",
-        "Et angreb via falske reklamer"
+        "Et fysisk angreb der bevidst ødelægger computerens interne hardware og komponenter",
+        "Systematisk afprøvning af mange kodeord (ofte automatiseret) til det rette findes",
+        "Et angreb der krypterer alle ofrets filer og kræver løsepenge for nøglen",
+        "Et angreb der i skjul spredes gennem inficerede reklamer på websites"
       ],
       "correctAnswers": [1],
       "explanation": "Et brute force-angreb består i, at angriberen indsender mange kodeord eller passphrases i håb om til sidst at gætte rigtigt. Angrebet tjekker systematisk alle mulige kodeord via automatiseret software og er mere effektivt mod korte/simple kodeord. Derfor blokerer mange sites kontoen midlertidigt efter flere fejlforsøg."
@@ -1305,10 +1305,10 @@
       "type": "single_select",
       "question": "Hvad er cryptojacking?",
       "options": [
-        "At stjæle kryptovaluta direkte fra en wallet",
-        "I hemmelighed at udnytte en computer til at mine kryptovaluta",
-        "At kryptere ofrets filer for løsepenge",
-        "At hacke en kryptobørs"
+        "At tømme en kryptovaluta-wallet direkte for mønter",
+        "I skjul at udnytte en computer til at mine kryptovaluta",
+        "At kryptere ofrets filer og kræve betaling i kryptovaluta",
+        "At bryde ind i og overtage en hel kryptobørs"
       ],
       "correctAnswers": [1],
       "explanation": "Cryptojacking er handlingen at udnytte en computer i hemmelighed til at mine kryptovaluta. Målet er at forblive så stille som muligt og mine så mange coins som muligt for profit. Det kan markant sænke computerens hastighed og slide på hardwaren på sigt."
@@ -1320,10 +1320,10 @@
       "type": "single_select",
       "question": "Hvad er browser hijacking?",
       "options": [
-        "Uønsket software der ændrer browserindstillinger uden brugerens tilladelse (f.eks. hjemmeside eller søgemaskine)",
-        "At browseren bliver hurtigere",
-        "En lovlig browseropdatering",
-        "At lukke browseren automatisk"
+        "Uønsket software der ændrer browserindstillinger uden tilladelse",
+        "En funktion der gør browseren hurtigere og mere stabil",
+        "En lovlig sikkerhedsopdatering af browserens kerne",
+        "En indstilling der lukker browseren automatisk efter brug"
       ],
       "correctAnswers": [0],
       "explanation": "Browser hijacking er uønsket software, der ændrer en browsers indstillinger uden brugerens tilladelse - f.eks. indsætter uønskede reklamer, ændrer hjemmesiden eller selve søgemaskinen. Det installeres ofte ved et uheld sammen med andet software."
@@ -1335,10 +1335,10 @@
       "type": "single_select",
       "question": "Hvad er malvertising?",
       "options": [
-        "Lovlig annoncering",
-        "Brug af reklamer på troværdige websites til at sprede malware, ofte uden at kræve at brugeren klikker",
-        "En type antivirus",
-        "En søgemaskineoptimering"
+        "Helt lovlig og betalt annoncering på troværdige og kendte hjemmesider",
+        "Brug af reklamer på troværdige sites til at sprede malware – ofte uden klik",
+        "En særlig type antivirus der specifikt blokerer reklamer og sporing",
+        "En anerkendt metode til søgemaskineoptimering af annoncer og indhold"
       ],
       "correctAnswers": [1],
       "explanation": "Malvertising er brugen af reklamer på troværdige websites til at sprede malware. Det interessante er, at infektioner leveret gennem malvertising ikke nødvendigvis kræver, at brugeren klikker, og det udnytter ikke sårbarheder på selve websitet."
@@ -1350,10 +1350,10 @@
       "type": "single_select",
       "question": "Hvad er en wiper?",
       "options": [
-        "Malware der krypterer data for løsepenge",
-        "Malware der har til hensigt at slette/ødelægge en computers hukommelse og data mod brugerens vilje",
-        "Et rengøringsprogram til midlertidige filer",
-        "En type firewall"
+        "Malware der krypterer data og kræver løsepenge for nøglen",
+        "Malware der bevidst sletter og ødelægger en computers data",
+        "Et rengøringsprogram der fjerner midlertidige systemfiler",
+        "En firewall der renser og filtrerer indgående trafik"
       ],
       "correctAnswers": [1],
       "explanation": "En wiper er en klasse af malware, der har til hensigt at slette en computers hukommelse mod brugerens vilje og dermed ødelægge al nyttig information i processen."
@@ -1365,10 +1365,10 @@
       "type": "single_select",
       "question": "Hvad er en RAM scraper?",
       "options": [
-        "Et program der øger RAM",
-        "Malware der installerer sig på point-of-sale-systemer for at indsamle personlig info som kreditkortnumre og pinkoder",
-        "En type køleplade",
-        "Et backupværktøj"
+        "Et program der frigør og øger systemets RAM",
+        "Malware på kassesystemer der stjæler kreditkortnumre og pinkoder",
+        "En kølekomponent der sidder oven på hukommelsen",
+        "Et backupværktøj der spejler indholdet af hukommelsen"
       ],
       "correctAnswers": [1],
       "explanation": "En RAM scraper er en type malware, der installerer sig selv på point-of-sale-systemer (kassesystemer) for at indsamle personlig information som kreditkortnumre og pinkoder fra forbrugere."
@@ -1380,10 +1380,10 @@
       "type": "single_select",
       "question": "Hvad er rogue security software?",
       "options": [
-        "Et lovligt antivirusprogram",
-        "Internetsvindel der narrer brugeren til at tro der er en virus og betale for et falskt fjernelsesværktøj, som i virkeligheden installerer malware",
-        "En firewall-regel",
-        "En type kryptering"
+        "Et fuldt lovligt og officielt certificeret antivirusprogram til pc",
+        "Svindel der narrer brugeren til at betale for et falskt fjernelsesværktøj",
+        "En firewall-regel der automatisk blokerer kendte falske programmer",
+        "En anerkendt krypteringsmetode der bruges af store sikkerhedsfirmaer"
       ],
       "correctAnswers": [1],
       "explanation": "Rogue security software er en form for internetsvindel, der vildleder brugere til at tro, der er en virus på computeren, og forsøger at overbevise dem om at betale for et falskt malware-fjernelsesværktøj, der i virkeligheden installerer malware. Det spredes typisk via malvertising."
@@ -1395,10 +1395,10 @@
       "type": "single_select",
       "question": "Hvad er hybrid malware?",
       "options": [
-        "Malware der kun rammer hybride computere",
-        "Brug af to eller flere typer malware i et enkelt angreb, f.eks. trojanere og orme eller adware og virus",
-        "En harmløs type malware",
-        "Malware der er halvt hardware"
+        "Malware der kun rammer hybride bærbare computere",
+        "Brug af to eller flere typer malware i ét samlet angreb",
+        "En harmløs malwaretype uden nogen skadelig effekt",
+        "Malware der delvist er indbygget i computerens hardware"
       ],
       "correctAnswers": [1],
       "explanation": "Hybrid malware refererer til den moderne brug af to eller flere typer malware af en angriber i et enkelt angreb. Ofte består kombinationerne af trojanere og orme, eller af adware og virus."
@@ -1410,10 +1410,10 @@
       "type": "single_select",
       "question": "Hvad er et botnet i forbindelse med DDoS-angreb?",
       "options": [
-        "Et lovligt netværk af servere",
-        "Et netværk af inficerede computere (bots), der styres af angriberen og bruges til f.eks. at oversvømme et mål med trafik",
-        "En type firewall",
-        "Et backupnetværk"
+        "Et lovligt netværk af samarbejdende servere",
+        "Et netværk af inficerede computere (bots) styret af angriberen",
+        "En type firewall der fordeler indgående trafik",
+        "Et backupnetværk der bruges i nødsituationer"
       ],
       "correctAnswers": [1],
       "explanation": "Et botnet er et netværk af inficerede computere (bots), der ofte bruges i DDoS-angreb. Trafikken, der oversvømmer offeret, kommer fra mange forskellige kilder, som typisk er andre inficerede computere brugt som bots."
@@ -1425,10 +1425,10 @@
       "type": "single_select",
       "question": "Hvilken malware-teknik kaldes 'cryptoviral extortion'?",
       "options": [
-        "At sprede virus via reklamer",
-        "Når ransomware krypterer ofrets filer og kræver betaling for at dekryptere dem",
-        "At mine kryptovaluta i hemmelighed",
-        "At forfalske IP-adresser"
+        "At sprede en computervirus gennem inficerede reklamer på websites",
+        "Når ransomware krypterer ofrets filer og kræver betaling for nøglen",
+        "I skjul at mine kryptovaluta ved at udnytte ofrets computers ydelse",
+        "At forfalske afsenderens IP-adresse for at skjule hvem der står bag"
       ],
       "correctAnswers": [1],
       "explanation": "Cryptoviral extortion er en teknik brugt af avanceret ransomware, hvor den krypterer ofrets filer, så de bliver utilgængelige, og kræver en løsesum for at dekryptere dem."
@@ -1440,10 +1440,10 @@
       "type": "single_select",
       "question": "Hvad er det primære formål med en server?",
       "options": [
-        "At spille spil",
-        "At levere netværkstjenester til brugere, software/applikationer og andre servere",
-        "At køle datacentret",
-        "At forsyne netværket med strøm"
+        "At køre spil og tunge grafikprogrammer for alle brugerne på netværket",
+        "At levere netværkstjenester til brugere, applikationer og andre servere",
+        "At køle og ventilere de øvrige fysiske enheder i datacentret",
+        "At forsyne alle netværkets tilsluttede enheder med stabil strøm"
       ],
       "correctAnswers": [1],
       "explanation": "Formålet med en server er at levere netværkstjenester til brugere, til software og applikationer samt til andre servere i miljøet. En server har ingen reel funktion, før man placerer noget på den i form af software eller en rolle."
@@ -1465,10 +1465,10 @@
       "type": "single_select",
       "question": "Hvad bruges en fil-server (file server) primært til?",
       "options": [
-        "At hoste websites eksternt",
-        "At lagre indhold/filer for alle - brugere gemmer filer, udviklere gemmer applikationer mm.",
-        "At køre databaser",
-        "At sende e-mails"
+        "At hoste og udstille websites mod internettet",
+        "At lagre filer og indhold centralt for brugere og udviklere",
+        "At køre og afvikle databaser for applikationer",
+        "At sende, modtage og levere virksomhedens e-mails"
       ],
       "correctAnswers": [1],
       "explanation": "En fil-server er den mest populære servertype og bruges til at lagre indhold for alle: brugere gemmer filer, udviklere gemmer applikationer og websites, og man gemmer værktøjer og backups. Den lagrer ustruktureret data."
@@ -1480,10 +1480,10 @@
       "type": "single_select",
       "question": "Hvad er forskellen på, hvilken data en file server og en database server lagrer?",
       "options": [
-        "File server lagrer struktureret data, database server lagrer ustruktureret data",
-        "File server lagrer ustruktureret data, database server lagrer struktureret data",
-        "De lagrer begge kun billeder",
-        "Der er ingen forskel"
+        "File server lagrer struktureret data, database server ustruktureret data",
+        "File server lagrer ustruktureret data, database server struktureret data",
+        "Begge lagrer udelukkende billed- og videofiler",
+        "Der er reelt ingen forskel på hvad de to lagrer"
       ],
       "correctAnswers": [1],
       "explanation": "En file server lagrer ustruktureret data (filer), mens en database server primært bruges af websites og applikationer til at læse og skrive data i en struktureret database."
@@ -1495,10 +1495,10 @@
       "type": "single_select",
       "question": "Hvad bruges en web-server til?",
       "options": [
-        "At lagre backups",
-        "At hoste og eksponere websites eksternt mod internettet og internt på intranettet",
-        "At køle servere",
-        "At sende e-mails"
+        "At lagre virksomhedens backups centralt",
+        "At hoste websites mod internettet og internt på intranettet",
+        "At køle og overvåge de øvrige servere",
+        "At sende og modtage virksomhedens e-mails"
       ],
       "correctAnswers": [1],
       "explanation": "En web-server bruges til at hoste og eksponere websites - eksternt mod internettet og internt mod brugere på intranettet."
@@ -1510,10 +1510,10 @@
       "type": "single_select",
       "question": "Hvad hoster en applikationsserver typisk?",
       "options": [
-        "Kun front-end af applikationen",
-        "Middle-tier-komponenterne (serverside-koden) mellem front-end og databasen",
-        "Kun selve databasen",
-        "Operativsystemet for klienterne"
+        "Kun front-end-delen, altså selve den grafiske brugergrænseflade",
+        "Middle-tier-komponenterne (serverside-koden) mellem front-end og database",
+        "Kun selve databasen, der udgør applikationens back-end-lag",
+        "Operativsystemet for samtlige tilsluttede klientmaskiner i netværket"
       ],
       "correctAnswers": [1],
       "explanation": "En applikationsserver hoster middle-tier-komponenterne af en applikation. Front-end (website eller desktopapp) tager imod data, der flyder gennem middle-tier (serverside-koden) og lander i back-end (databasen)."
@@ -1525,10 +1525,10 @@
       "type": "single_select",
       "question": "Hvad bruges en print-server til?",
       "options": [
-        "At udskrive hurtigere fysisk",
-        "At eksponere printere til netværket og centralt administrere printere, drivere og print-jobs",
-        "At lagre filer",
-        "At køre databaser"
+        "At gøre den fysiske udskrivning på printerne markant hurtigere",
+        "At udstille printere og centralt styre drivere og print-jobs",
+        "At lagre kopier af alle udskrevne dokumenter som filer",
+        "At køre og vedligeholde databaser med udskriftsdata"
       ],
       "correctAnswers": [1],
       "explanation": "En print-server bruges til at eksponere printere til netværket, så alle kan bruge dem, og giver mulighed for centralt at administrere printerne, deres drivere og de print-jobs der kører."
@@ -1540,10 +1540,10 @@
       "type": "single_select",
       "question": "Hvad står IIS for, og hvad er det?",
       "options": [
-        "Internet Information Services - Microsofts web-server-platform",
-        "Internal Internet System - et operativsystem",
-        "IP Information Service - en netværksprotokol",
-        "Integrated Input System - en hardwarekomponent"
+        "Internet Information Services – Microsofts web-server-platform",
+        "Internal Internet System – et serveroperativsystem",
+        "IP Information Service – en netværksprotokol",
+        "Integrated Input System – en hardwarekomponent"
       ],
       "correctAnswers": [0],
       "explanation": "IIS står for Internet Information Services og er Microsofts web-server-platform, der bruges til at hoste websites."
@@ -1555,10 +1555,10 @@
       "type": "single_select",
       "question": "Hvad er en domain controller (DC)?",
       "options": [
-        "En server der køler datacentret",
-        "En server der binder netværket sammen og håndterer central styring (f.eks. brugere/login i domænet)",
-        "En type printer",
-        "En firewall"
+        "En server der køler og overvåger datacentret",
+        "En server der binder netværket sammen og styrer brugere/login i domænet",
+        "En specialiseret enhed der styrer netværkets printere",
+        "En firewall der kontrollerer al domænetrafik"
       ],
       "correctAnswers": [1],
       "explanation": "En domain controller (DC) er en server, der binder netværket sammen og står for central styring, herunder håndtering af brugere og login i et domæne. I eksemplet 'DC nug' var det den server, der tog alt sammen."
@@ -1570,10 +1570,10 @@
       "type": "single_select",
       "question": "Hvad er Server Manager i Windows Server?",
       "options": [
-        "Et spil",
+        "Et indbygget spil i Windows Server",
         "Et værktøj til at fjernadministrere flere maskiner på én gang",
-        "En type virus",
-        "En netværksprotokol"
+        "En virustype der specifikt rammer servere",
+        "En netværksprotokol til kommunikation mellem servere"
       ],
       "correctAnswers": [1],
       "explanation": "Server Manager er et værktøj i Windows Server, der er godt til at fjernadministrere flere maskiner på én gang - man kan se computernavn, IP-adresse, processorer, hukommelse, logs og events på de forskellige servere."
@@ -1585,10 +1585,10 @@
       "type": "single_select",
       "question": "Kan en server have flere roller på én gang?",
       "options": [
-        "Nej, en server kan kun have én rolle",
-        "Ja, en server kan være dedikeret til én rolle eller være multi-faceted med flere roller",
-        "Kun virtuelle servere kan have flere roller",
-        "Kun Linux-servere kan have flere roller"
+        "Nej, en server kan kun varetage præcis én rolle",
+        "Ja, en server kan være dedikeret til én rolle eller have flere roller",
+        "Kun virtuelle servere kan varetage flere roller samtidigt",
+        "Kun Linux-servere kan varetage flere roller samtidigt"
       ],
       "correctAnswers": [1],
       "explanation": "En server kan være dedikeret til en enkelt rolle, men ofte ser man også servere, der indeholder flere roller og er multi-faceted, multi-purpose servere."
@@ -1600,10 +1600,10 @@
       "type": "single_select",
       "question": "Hvad bruges en mail-server til?",
       "options": [
-        "At hoste websites",
+        "At hoste og udstille virksomhedens websites",
         "At lagre, behandle og levere e-mails",
-        "At køle datacentret",
-        "At tildele IP-adresser"
+        "At køle og overvåge datacentrets servere",
+        "At tildele IP-adresser til klienterne"
       ],
       "correctAnswers": [1],
       "explanation": "Mail-servere bruges til at lagre, behandle og levere e-mails."
@@ -1615,10 +1615,10 @@
       "type": "single_select",
       "question": "Hvad er en driver i forhold til operativsystemet og hardware?",
       "options": [
-        "En person der styrer serveren",
-        "Software der lader operativsystemet kommunikere med og styre en bestemt hardwareenhed",
-        "En type netværkskabel",
-        "En del af CPU'en"
+        "En person der drifter og administrerer serveren",
+        "Software der lader OS'et kommunikere med en bestemt hardwareenhed",
+        "Et netværkskabel mellem enheden og computeren",
+        "En fast indbygget del af selve processoren"
       ],
       "correctAnswers": [1],
       "explanation": "En driver er software, der lader operativsystemet kommunikere med og styre en bestemt hardwareenhed (f.eks. printer, grafikkort eller netværkskort), så man ikke skal skrive et nyt program for hver enkelt hardware hver gang."
@@ -1630,10 +1630,10 @@
       "type": "single_select",
       "question": "Hvorfor har en CPU ofte sin egen integrerede grafik, og hvad er ulempen?",
       "options": [
-        "Den er altid kraftigere end et dedikeret grafikkort",
-        "Nogle CPU'er har integreret grafik, men det er typisk mindre kraftfuldt end et dedikeret grafikkort",
-        "Integreret grafik kan ikke vise noget på skærmen",
-        "Det øger strømforbruget markant"
+        "Integreret grafik er altid kraftigere end ethvert dedikeret grafikkort",
+        "Nogle CPU'er har integreret grafik, men den er typisk svagere end et dedikeret kort",
+        "Integreret grafik kan slet ikke vise noget billede på en ekstern skærm",
+        "Det øger markant computerens samlede strømforbrug under almindelig brug"
       ],
       "correctAnswers": [1],
       "explanation": "Nogle CPU'er kommer allerede med et integreret grafikkort, men de er typisk mindre kraftfulde end et separat (dedikeret) grafikkort."
@@ -1645,10 +1645,10 @@
       "type": "single_select",
       "question": "Hvad gør et trådløst kort (wireless card) i en computer?",
       "options": [
-        "Det giver ekstra lagerplads",
-        "Det giver adgang til internettet via wifi uden brug af Ethernet-kabler",
-        "Det køler CPU'en",
-        "Det forsyner med strøm"
+        "Det giver computeren ekstra lagerplads",
+        "Det giver adgang til internettet via wifi uden kabler",
+        "Det leder varme væk fra processoren",
+        "Det forsyner bundkortet med strøm"
       ],
       "correctAnswers": [1],
       "explanation": "Et trådløst kort giver computeren adgang til internettet via wifi, uden at man behøver bruge Ethernet-kabler."
@@ -1660,10 +1660,10 @@
       "type": "single_select",
       "question": "Hvad kan konsekvensen være for en virksomhed, hvis al deres data og kundeoplysninger bliver stjålet (exfiltreret)?",
       "options": [
-        "Ingen reel konsekvens",
-        "Det kan i værste fald betyde enden på virksomheden fra et enkelt sikkerhedsbrud",
-        "Computerne bliver hurtigere",
-        "De får automatisk pengene tilbage"
+        "Det har reelt ingen mærkbar konsekvens for virksomhedens drift",
+        "Det kan i værste fald betyde enden på virksomheden fra et enkelt brud",
+        "Computerne i virksomheden kører mærkbart hurtigere bagefter",
+        "Virksomheden får automatisk fuld erstatning udbetalt af staten"
       ],
       "correctAnswers": [1],
       "explanation": "Hvis en virksomhed bliver angrebet og al data om klienter, personhenførbar information (PII) og firmahemmeligheder bliver stjålet eller exfiltreret, kan det i værste fald betyde enden på virksomheden fra et enkelt simpelt sikkerhedsbrud."
@@ -1675,10 +1675,10 @@
       "type": "single_select",
       "question": "Hvad er fordelen ved at TLS/SSL ud over kryptering også verificerer serverens identitet?",
       "options": [
-        "Det gør forbindelsen hurtigere",
-        "Det hjælper med at sikre, at man taler med det rigtige website og ikke et hacker-/falsk site",
-        "Det sparer strøm",
-        "Det øger lagerplads"
+        "Det gør forbindelsen mærkbart hurtigere",
+        "Det sikrer at man taler med det rigtige site og ikke et falskt",
+        "Det reducerer serverens samlede strømforbrug",
+        "Det øger den tilgængelige lagerplads på serveren"
       ],
       "correctAnswers": [1],
       "explanation": "TLS/SSL giver ikke kun kryptering og fortrolighed - det hjælper også med at verificere, at man taler med det rigtige site og ikke et hacker-site. Det er en vigtig beskyttelse mod f.eks. forfalskede websites."
@@ -1690,10 +1690,10 @@
       "type": "single_select",
       "question": "Hvis to brugere har samme kodeord, hvad er en typisk svaghed ved at gemme hashes uden 'salt'?",
       "options": [
-        "Hashene bliver forskellige alligevel",
-        "Identiske kodeord giver identiske hashes, hvilket gør dem lettere at angribe (f.eks. via opslagstabeller)",
-        "Hashene bliver umulige at lave",
-        "Det gør kodeordene længere"
+        "Identiske kodeord giver alligevel helt forskellige hashes",
+        "Identiske kodeord giver identiske hashes, der er lettere at angribe",
+        "Hashene kan slet ikke beregnes uden et salt",
+        "Det gør de gemte kodeord betydeligt længere"
       ],
       "correctAnswers": [1],
       "explanation": "Uden salt vil identiske kodeord give identiske hashes. Det gør dem lettere at angribe, f.eks. med forudberegnede opslagstabeller (rainbow tables). Salt tilføjer en unik værdi til hvert kodeord, så ens kodeord får forskellige hashes."
@@ -1708,7 +1708,7 @@
         "Layer 3 med IP-adresser",
         "Layer 2 med MAC-adresser",
         "Layer 4 med portnumre",
-        "Layer 1 med kabler"
+        "Layer 1 med fysiske kabler"
       ],
       "correctAnswers": [1],
       "explanation": "En switch arbejder primært på layer 2 og forwarder data baseret på MAC-adresser (de fysiske, burned-in adresser på netværkskortet). En router arbejder derimod på layer 3 med IP-adresser."
@@ -1720,10 +1720,10 @@
       "type": "single_select",
       "question": "Hvad er et masquerade-angreb som nævnt i materialet om phishing/ransomware?",
       "options": [
-        "Et angreb hvor man udklæder sig fysisk",
-        "Når et synligt angreb (f.eks. på nogle maskiner) bruges som misdirection, mens angriberen i virkeligheden går efter mere kritiske data andetsteds",
-        "En type kryptering",
-        "Et lovligt loginforsøg"
+        "Et angreb hvor angriberen fysisk udklæder sig som en betroet ansat for at få adgang",
+        "Når et synligt angreb bruges som afledning, mens man går efter kritisk data andetsteds",
+        "En avanceret krypteringsmetode der skjuler det egentlige indhold af trafikken",
+        "Et helt almindeligt og fuldstændig lovligt loginforsøg fra en bruger"
       ],
       "correctAnswers": [1],
       "explanation": "Et masquerade kan være, at malware på et offers system maskerer eller skjuler et andet angreb i spil - f.eks. bruger angriberen flere maskiner som misdirection, mens de i virkeligheden går efter endnu mere kritisk data et andet sted."

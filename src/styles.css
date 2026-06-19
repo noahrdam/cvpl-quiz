@@ -561,6 +561,135 @@ body {
   padding-top: 10px;
 }
 
+/* ---------- glossary ---------- */
+.hero-glossary-btn {
+  margin-top: 18px;
+}
+
+.glossary-intro {
+  text-align: center;
+  margin-bottom: 18px;
+}
+.glossary-intro h1 {
+  font-size: 1.9rem;
+  margin: 0 0 6px;
+}
+.glossary-intro p {
+  color: var(--text-dim);
+  margin: 0;
+}
+
+.glossary-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.glossary-search .search-icon {
+  position: absolute;
+  left: 14px;
+  font-size: 1rem;
+  opacity: 0.7;
+  pointer-events: none;
+}
+.glossary-search input {
+  width: 100%;
+  background: var(--card);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 13px 42px 13px 42px;
+  color: var(--text);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.glossary-search input::placeholder {
+  color: var(--text-dim);
+}
+.glossary-search input:focus {
+  border-color: var(--accent);
+}
+.search-clear {
+  position: absolute;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: var(--text-dim);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-clear:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.glossary-cats {
+  margin-bottom: 14px;
+}
+
+.glossary-count {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  margin: 0 0 12px 2px;
+}
+
+.glossary-empty {
+  text-align: center;
+  color: var(--text-dim);
+  padding: 30px 0;
+}
+
+.glossary-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 12px;
+}
+.glossary-entry {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 15px 17px;
+}
+.glossary-entry-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 2px;
+}
+.glossary-term {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+.glossary-cat-tag {
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 3px 8px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+.glossary-full {
+  margin: 0 0 6px;
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-style: italic;
+}
+.glossary-def {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
 @media (max-width: 560px) {
   .hero h1 {
     font-size: 1.6rem;
